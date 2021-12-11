@@ -1,19 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
 namespace OnlineStudentManagementSystem
 {
-    public class Course
+    public class Profesion
     {
-        public int CourseID { get; set; }
-        public string CourseName { get; set; }
+        [Key]
+        public int ProfesionId { get; set; }
+        [Required]
+        public string ProfesionName { get; set; }
 
-        // Students
         public ICollection<Student> Students { get; set; }
-        // Instructors
-
-        // Grade
     }
 }

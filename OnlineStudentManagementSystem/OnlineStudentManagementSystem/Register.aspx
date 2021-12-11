@@ -163,7 +163,9 @@
 
             <asp:Button ID="btn_add" class="button" runat="server" Text="Add" OnClick="btn_add_Click" />
             <div class="social">
-                <div class="go"><a href="Register.aspx">Forget password?</a></div>
+                <div class="go">
+                    <asp:Button ID="btn_resetPassword" runat="server" Text="Forget password?" OnClick="btn_resetPassword_Click" />
+                </div>
             </div>
         </div>
     </form>

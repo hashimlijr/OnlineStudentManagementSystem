@@ -13,7 +13,7 @@ namespace OnlineStudentManagementSystem
         public DateTime? DateOfBirth { get; set; }
         public string ProfesionOfInstructor { get; set; }
         public string Email { get; set; }
-        public byte[] Photo { get; set; }
+        //public byte[] Photo { get; set; }
         public string Password { get; set; }
 
         // Courses

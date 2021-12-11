@@ -52,7 +52,7 @@
             bottom: -80px;
         }
         form{
-            height: 520px;
+            height: 600px;
             width: 400px;
             background-color: rgba(255,255,255,0.13);
             position: absolute;
@@ -99,7 +99,7 @@
         /*::placeholder{
             color: #e5e5e5;
         }*/
-        button{
+        .button{
             margin-top: 50px;
             width: 100%;
             background-color: #ffffff;
@@ -132,6 +132,9 @@
         .social a{
           text-decoration: none;
         }
+        .label{            
+            font-size: 12px;
+        }
 
     </style>
 </head>
@@ -150,22 +153,12 @@
             <label for="password">Password</label>
             <asp:TextBox ID="tb_password" runat="server" placeholder="Password"></asp:TextBox>
 
-            <button>Log In</button>
+            <asp:Label ID="lbl_status" class="label" runat="server" Text="Status"></asp:Label>
+
+            <asp:Button ID="btn_login" class="button" runat="server" Text="Sign in" OnClick="btn_login_Click" />
             <div class="social">
-              <%--<div class="go"><i class="fab fa-google"></i>Forget password?</div>--%>
                 <div class="go"><a href="Register.aspx">Forget password?</a></div>
             </div>
-
-            <%--<h1>Login</h1>
-
-            <div>
-                <asp:TextBox ID="tb_email" runat="server" placeholder="Email"></asp:TextBox>
-                <br />
-                <br />                
-                <asp:TextBox ID="tb_password" runat="server" placeholder="Password"></asp:TextBox>
-                <br />
-                <asp:Button ID="btn_login" runat="server" Text="Sign in" />
-            </div>--%>
         </div>
     </form>
 </body>

@@ -78,5 +78,44 @@ namespace OnlineStudentManagementSystem
                 lbl_status.Text = "Please fill all fields.";
             }           
         }
+
+        protected void btn_resetPassword_Click(object sender, EventArgs e)
+        {
+            Student studenttest = new Student()
+            {
+                StudentName = "StudentName",
+                StudentSurname = "StudentSurname",
+                Email = "email@gmail.com",
+                Password = "password",
+            };
+            context.Students.Add(studenttest);
+
+            Course course = new Course()
+            {
+                CourseName = "CourseName",
+            };
+            context.Courses.Add(course);
+            Profesion profesion = new Profesion()
+            {
+                ProfesionName = "ProfesionName",
+            };
+            context.Profesions.Add(profesion);
+
+            Instructor instructor = new Instructor()
+            {
+                InstructorName = "InstructorName",
+                InstructorSurname = "InstructorSurname",
+                ProfesionOfInstructor = "ProfesionOfInstructor"
+            };
+            context.Instructors.Add(instructor);
+
+            Grade grade = new Grade()
+            {
+                GradeScore = 98,
+            };
+            context.Grades.Add(grade);
+
+            context.SaveChanges();
+        }
     }
 }

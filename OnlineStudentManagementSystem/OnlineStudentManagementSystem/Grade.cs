@@ -16,6 +16,9 @@ namespace OnlineStudentManagementSystem
         public int StudentID { get; set; }
 
         public int GradeScore { get; set; }
-        
+
+        public Student Student { get; set; }
+        public Course Course { get; set; }
+
     }
 }

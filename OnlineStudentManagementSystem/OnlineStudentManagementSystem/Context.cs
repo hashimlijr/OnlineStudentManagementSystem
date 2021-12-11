@@ -10,9 +10,13 @@ namespace OnlineStudentManagementSystem
     {
         public Context() : base("StudentMS")
         {
-            Database.SetInitializer<Context>(new CreateDatabaseIfNotExists<Context>());
+
         }
 
         public DbSet<Student> Students { get; set; }
+        public DbSet<Course> Courses { get; set; }
+        public DbSet<Instructor> Instructors { get; set; }
+        public DbSet<Grade> Grades { get; set; }
+        public DbSet<Profesion> Profesions { get; set; }
     }
 }
