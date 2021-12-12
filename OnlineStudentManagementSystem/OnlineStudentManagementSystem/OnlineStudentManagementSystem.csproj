@@ -77,6 +77,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AddInstructor.aspx" />
     <Content Include="AdminPanel.aspx" />
     <Content Include="Index.aspx" />
     <Content Include="InstructorDashboard.aspx" />
@@ -85,6 +86,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddInstructor.aspx.cs">
+      <DependentUpon>AddInstructor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddInstructor.aspx.designer.cs">
+      <DependentUpon>AddInstructor.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AdminPanel.aspx.cs">
       <DependentUpon>AdminPanel.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

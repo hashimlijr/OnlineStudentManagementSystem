@@ -11,17 +11,17 @@ namespace OnlineStudentManagementSystem
 {
 
 
-    public partial class Register
+    public partial class AddInstructor
     {
 
         /// <summary>
-        /// addStudentForm control.
+        /// addInstructorForm control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm addStudentForm;
+        protected global::System.Web.UI.HtmlControls.HtmlForm addInstructorForm;
 
         /// <summary>
         /// lbl_status control.
@@ -87,13 +87,13 @@ namespace OnlineStudentManagementSystem
         protected global::System.Web.UI.WebControls.TextBox tb_conpassword;
 
         /// <summary>
-        /// DropDownList_Profesion control.
+        /// DropDownList_Branch control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList_Profesion;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownList_Branch;
 
         /// <summary>
         /// tb_date control.

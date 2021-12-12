@@ -10,9 +10,12 @@
     <form id="form1" runat="server">
         <div>
             <asp:Button ID="btn_GetAllStudents" runat="server" Text="Get All Students" OnClick="btn_GetAllStudents_Click" />
-        </div>
         
-        <asp:GridView ID="gv_Students" runat="server"></asp:GridView>
+            <asp:DropDownList ID="ddl_Course" runat="server"></asp:DropDownList>
+            <asp:Button ID="btn_GetStudentsFromCourse" runat="server" Text="Get Students From Course" />
+            <asp:GridView ID="gv_Students" runat="server"></asp:GridView>
+
+        </div>
     </form>
 </body>
 </html>

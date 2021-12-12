@@ -1,10 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="OnlineStudentManagementSystem.Register" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AddInstructor.aspx.cs" Inherits="OnlineStudentManagementSystem.AddInstructor" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Add Student</title>
+    <title>Add Instructor</title>
 
     <link rel="preconnect" href="https://fonts.gstatic.com"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
@@ -165,13 +165,13 @@
         <div class="shape"></div>
     </div>
 
-    <form id="addStudentForm" runat="server">
+    <form id="addInstructorForm" runat="server">
 
         <div>
-            <h3>Add Here</h3>
+            <h3>Add Instructor</h3>
 
             <br />
-            
+
             <asp:Label ID="lbl_status" runat="server" Text="* required fields"></asp:Label>
 
             <label for="name">Name*</label>
@@ -192,17 +192,16 @@
             <label for="conpassword">Password confirmation*</label>
             <asp:TextBox ID="tb_conpassword" runat="server" placeholder="Confirm password"></asp:TextBox>
 
-            <label for="profesion">Choose profesion of student</label>
-            <asp:DropDownList ID="DropDownList_Profesion" class="dropdownlist" runat="server"></asp:DropDownList>
+            <label for="branch">Choose branch of instructor</label>
+            <asp:DropDownList ID="DropDownList_Branch" class="dropdownlist" runat="server"></asp:DropDownList>            
 
             <label for="date">Choose date of birth*</label>
             <asp:TextBox ID="tb_date" textmode="Date" runat="server" placeholder="Date"></asp:TextBox>
 
-
-            <asp:Button ID="btn_add" class="button" runat="server" Text="Add" OnClick="btn_add_Click" />
+            <asp:Button ID="btn_add" class="button" runat="server" Text="Add" OnClick="btn_add_Click"/>
 
             <div class="social">
-                <asp:Button ID="btn_Cancel" class="go" runat="server" Text="Cancel" OnClick="btn_Cancel_Click" />
+                <asp:Button ID="btn_Cancel" class="go" runat="server" Text="Cancel" OnClick="btn_Cancel_Click"/>
             </div>
 
         </div>
@@ -212,3 +211,4 @@
 </body>
 
 </html>
+

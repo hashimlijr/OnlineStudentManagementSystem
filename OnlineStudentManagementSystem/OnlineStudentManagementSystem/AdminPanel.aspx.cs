@@ -20,6 +20,8 @@ namespace OnlineStudentManagementSystem
             {
                 BranchName = "BranchName",
             };
+            context.Branches.Add(branch);
+
             Instructor instructor = new Instructor()
             {
                 InstructorName = "InstructorName",
@@ -27,7 +29,6 @@ namespace OnlineStudentManagementSystem
                 FatherNameOfInstructor = "FatherNameOfInstructor",
                 Email = "instructor@gmail.com",
                 Password = "instructor123",
-                BranchId = 1,
             };
             context.Instructors.Add(instructor);
 

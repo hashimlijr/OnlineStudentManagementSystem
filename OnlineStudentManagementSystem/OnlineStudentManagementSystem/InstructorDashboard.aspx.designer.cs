@@ -33,6 +33,24 @@ namespace OnlineStudentManagementSystem
         protected global::System.Web.UI.WebControls.Button btn_GetAllStudents;
 
         /// <summary>
+        /// ddl_Course control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddl_Course;
+
+        /// <summary>
+        /// btn_GetStudentsFromCourse control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_GetStudentsFromCourse;
+
+        /// <summary>
         /// gv_Students control.
         /// </summary>
         /// <remarks>

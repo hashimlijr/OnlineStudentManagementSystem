@@ -18,5 +18,6 @@ namespace OnlineStudentManagementSystem
         public DbSet<Instructor> Instructors { get; set; }
         public DbSet<Grade> Grades { get; set; }
         public DbSet<Profesion> Profesions { get; set; }
+        public DbSet<Branch> Branches { get; set; }
     }
 }

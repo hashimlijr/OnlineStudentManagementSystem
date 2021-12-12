@@ -11,7 +11,12 @@ namespace OnlineStudentManagementSystem
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            var courses = context.Courses.ToList();
 
+            foreach(var course in courses)
+            {
+                ddl_Course.Items.Add(course.CourseName);
+            }
         }
         public Context context = new Context();
         protected void btn_GetAllStudents_Click(object sender, EventArgs e)
