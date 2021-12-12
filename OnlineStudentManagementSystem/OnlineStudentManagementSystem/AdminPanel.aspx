@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Index.aspx.cs" Inherits="OnlineStudentManagementSystem.Index" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AdminPanel.aspx.cs" Inherits="OnlineStudentManagementSystem.AdminPanel" %>
 
 <!DOCTYPE html>
 
@@ -12,7 +12,7 @@
         }
         body {
             height: 125vh;
-            background-image: url('https://codetheweb.blog/assets/img/posts/style-a-navigation-bar-css/background.jpg');
+            /*background-image: url('https://codetheweb.blog/assets/img/posts/style-a-navigation-bar-css/background.jpg');*/
             background-size: cover;
             font-family: sans-serif;
             margin-top: 80px;
@@ -55,6 +55,17 @@
             position:relative;
             left:100%;
         }
+        .button{
+            margin-top: 50px;
+            width: 100%;
+            background-color: #ffffff;
+            color: #080710;
+            padding: 15px 0;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 5px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -63,7 +74,7 @@
             <header>
             <nav>
                 <ul>
-                    <li><a href="#">Home</a></li>
+                    <li><a href="Index.aspx">Home</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Pricing</a></li>
                 </ul>
@@ -77,7 +88,9 @@
         </header>
         </div>
         <div>
-
+            <asp:Button ID="btn_CreateDB" class="button" runat="server" Text="Create DB" OnClick="btn_CreateDB_Click" />
+            <br />
+            <asp:Button ID="btn_AddStudent" class="button" runat="server" Text="Add Student" OnClick="btn_AddStudent_Click" />
         </div>
     </form>
 </body>

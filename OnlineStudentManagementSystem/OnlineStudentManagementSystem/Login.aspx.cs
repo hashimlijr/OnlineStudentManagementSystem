@@ -14,16 +14,31 @@ namespace OnlineStudentManagementSystem
             lbl_status.Visible = false;
         }
         public readonly Context context = new Context();
-        public bool CheckLogin(Student s)
+        public string CheckStudent(Student s)
         {
-            var registeredUser = context.Students.FirstOrDefault(i => i.Email.Equals(s.Email) && i.Password.Equals(s.Password));
+            var registeredStudent = context.Students.FirstOrDefault(i => i.Email.Equals(s.Email) && i.Password.Equals(s.Password));
 
-            if(registeredUser == null)
+            if (registeredStudent != null)
             {
-                return false;
+                return "student";
             }
+            else
+            {
+                return "notfound";
+            }
+        }
+        public string CheckInstructor(Instructor ins)
+        {
+            var registeredInstructor = context.Instructors.FirstOrDefault(i => i.Email.Equals(ins.Email) && i.Password.Equals(ins.Password));
 
-            return true;
+            if (registeredInstructor != null)
+            {
+                return "instructor";
+            }
+            else
+            {
+                return "notfound";
+            }
         }
         protected void btn_login_Click(object sender, EventArgs e)
         {
@@ -38,13 +53,23 @@ namespace OnlineStudentManagementSystem
                     Password = password
                 };
 
-                if (CheckLogin(loginStudent))
+                Instructor loginInstructor = new Instructor()
+                {
+                    Email = email,
+                    Password = password,
+                };
+
+                if (CheckStudent(loginStudent) == "student")
                 {
                     Response.Redirect("Index.aspx");
                 }
+                else if(CheckInstructor(loginInstructor) == "instructor")
+                {
+                    Response.Redirect("InstructorDashboard.aspx");
+                }
                 else
                 {
-                    lbl_status.Text = "Student couldn't be found. Please check email and password again";
+                    lbl_status.Text = "User couldn't be found. Please check email and password again";
                     lbl_status.Visible = true;
                 }
             }

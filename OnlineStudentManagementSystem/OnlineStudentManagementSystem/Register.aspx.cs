@@ -11,7 +11,10 @@ namespace OnlineStudentManagementSystem
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            var profesions = context.Profesions.ToList();
+            foreach(var profesion in profesions){
+                DropDownList_Profesion.Items.Add(profesion.ProfesionName);
+            }
         }
         public readonly Context context = new Context();
 
@@ -23,6 +26,8 @@ namespace OnlineStudentManagementSystem
             tb_username.Text = "";
             tb_password.Text = "";
             tb_conpassword.Text = "";
+            tb_fatherName.Text = "";
+            DropDownList_Profesion.SelectedIndex = 0; 
         }
 
         public bool CheckingStudentDoesntExists(Student s)
@@ -37,11 +42,14 @@ namespace OnlineStudentManagementSystem
             string name = tb_name.Text.Trim();
             string surname = tb_surname.Text.Trim();
             string email = tb_email.Text.Trim();
-            string username = tb_username.Text.Trim();
+            string fatherName = tb_fatherName.Text.Trim();
             string password = tb_password.Text.Trim();
             string conpassword = tb_conpassword.Text.Trim();
+            string profesionName = DropDownList_Profesion.SelectedValue;
 
-            if(name != "" && surname != "" && email != "" && password != "" && conpassword != "")
+            int profesionId = context.Profesions.FirstOrDefault(i => i.ProfesionName == profesionName).ProfesionId;
+
+            if(name != "" && surname != "" && email != "" && password != "" && conpassword != "" && fatherName != "")
             {
                 if(password == conpassword)
                 {
@@ -49,8 +57,10 @@ namespace OnlineStudentManagementSystem
                     {
                         StudentName = name,
                         StudentSurname = surname,
+                        FatherNameOfStudent = fatherName,
                         Email = email,
                         Password = password,
+                        ProfesionId = profesionId,
                     };
 
                     if (CheckingStudentDoesntExists(student))
@@ -81,37 +91,20 @@ namespace OnlineStudentManagementSystem
 
         protected void btn_resetPassword_Click(object sender, EventArgs e)
         {
-            Student studenttest = new Student()
-            {
-                StudentName = "StudentName",
-                StudentSurname = "StudentSurname",
-                Email = "email@gmail.com",
-                Password = "password",
-            };
-            context.Students.Add(studenttest);
+            
 
-            Course course = new Course()
-            {
-                CourseName = "CourseName",
-            };
-            context.Courses.Add(course);
-            Profesion profesion = new Profesion()
-            {
-                ProfesionName = "ProfesionName",
-            };
-            context.Profesions.Add(profesion);
+            var student = context.Students.FirstOrDefault(i => i.StudentID == 1);
+            var course = context.Courses.FirstOrDefault(i => i.CourseID == 1);
 
-            Instructor instructor = new Instructor()
-            {
-                InstructorName = "InstructorName",
-                InstructorSurname = "InstructorSurname",
-                ProfesionOfInstructor = "ProfesionOfInstructor"
-            };
-            context.Instructors.Add(instructor);
+
+            //student.Courses = new List<Course>();
+            //student.Courses.Add(course);
 
             Grade grade = new Grade()
             {
-                GradeScore = 98,
+                StudentID = student.StudentID,
+                CourseID = course.CourseID,
+                GradeScore = 87,
             };
             context.Grades.Add(grade);
 

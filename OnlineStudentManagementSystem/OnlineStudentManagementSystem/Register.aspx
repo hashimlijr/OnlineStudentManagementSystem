@@ -152,12 +152,18 @@
             <asp:TextBox ID="tb_email" runat="server" placeholder="Email"></asp:TextBox>
             <label for="username">Username</label>
             <asp:TextBox ID="tb_username" runat="server" placeholder="Username"></asp:TextBox>
+            <label for="username">Father Name</label>
+            <asp:TextBox ID="tb_fatherName" runat="server" placeholder="Father Name"></asp:TextBox>
 
             <label for="password">Password</label>
             <asp:TextBox ID="tb_password" runat="server" placeholder="Password"></asp:TextBox>
             <label for="password">Password confirmation</label>
             <asp:TextBox ID="tb_conpassword" runat="server" placeholder="Confirm password"></asp:TextBox>
+
+            <label for="profesion">Choose profesion of student</label>
+            <asp:DropDownList ID="DropDownList_Profesion" runat="server"></asp:DropDownList>
             <br />
+
 
             <asp:Label ID="lbl_status" runat="server" Text="Status:"></asp:Label>
 

@@ -13,5 +13,7 @@ namespace OnlineStudentManagementSystem
         {
 
         }
+        public Context context = new Context();
+
     }
 }

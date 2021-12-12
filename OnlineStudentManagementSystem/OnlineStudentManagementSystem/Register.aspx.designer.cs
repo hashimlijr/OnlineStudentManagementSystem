@@ -60,6 +60,15 @@ namespace OnlineStudentManagementSystem
         protected global::System.Web.UI.WebControls.TextBox tb_username;
 
         /// <summary>
+        /// tb_fatherName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tb_fatherName;
+
+        /// <summary>
         /// tb_password control.
         /// </summary>
         /// <remarks>
@@ -76,6 +85,15 @@ namespace OnlineStudentManagementSystem
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox tb_conpassword;
+
+        /// <summary>
+        /// DropDownList_Profesion control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DropDownList_Profesion;
 
         /// <summary>
         /// lbl_status control.

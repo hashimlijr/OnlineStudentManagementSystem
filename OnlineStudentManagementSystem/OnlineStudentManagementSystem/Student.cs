@@ -10,8 +10,11 @@ namespace OnlineStudentManagementSystem
     {
         [Key]
         public int StudentID { get; set; }
+        [Required]
         public string StudentName { get; set; }
+        [Required]
         public string StudentSurname { get; set; }
+        [Required]
         public string FatherNameOfStudent { get; set; }
         public DateTime? DateOfBirth { get; set; }
         [Required]
@@ -21,7 +24,8 @@ namespace OnlineStudentManagementSystem
         public string Password { get; set; }
 
         // Profession
-        public virtual Profesion Profesion { get; set; }
+        
+        public int ProfesionId { get; set; }
 
         // Courses
         public ICollection<Course> Courses { get; set; }
