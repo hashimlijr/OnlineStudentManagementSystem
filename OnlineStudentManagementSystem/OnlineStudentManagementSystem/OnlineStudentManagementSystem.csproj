@@ -77,7 +77,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AddBranch.aspx" />
+    <Content Include="AddCourse.aspx" />
     <Content Include="AddInstructor.aspx" />
+    <Content Include="AddProfesion.aspx" />
     <Content Include="AdminPanel.aspx" />
     <Content Include="Index.aspx" />
     <Content Include="InstructorDashboard.aspx" />
@@ -86,12 +89,33 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddBranch.aspx.cs">
+      <DependentUpon>AddBranch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddBranch.aspx.designer.cs">
+      <DependentUpon>AddBranch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddCourse.aspx.cs">
+      <DependentUpon>AddCourse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddCourse.aspx.designer.cs">
+      <DependentUpon>AddCourse.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AddInstructor.aspx.cs">
       <DependentUpon>AddInstructor.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="AddInstructor.aspx.designer.cs">
       <DependentUpon>AddInstructor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddProfesion.aspx.cs">
+      <DependentUpon>AddProfesion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddProfesion.aspx.designer.cs">
+      <DependentUpon>AddProfesion.aspx</DependentUpon>
     </Compile>
     <Compile Include="AdminPanel.aspx.cs">
       <DependentUpon>AdminPanel.aspx</DependentUpon>

@@ -1,15 +1,13 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="OnlineStudentManagementSystem.Register" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AddBranch.aspx.cs" Inherits="OnlineStudentManagementSystem.AddBranch" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Add Student</title>
-
+    <title>Add Branch</title>
     <link rel="preconnect" href="https://fonts.gstatic.com"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet"/>
-
     <!--Stylesheet-->
     <style media="screen">
         *,
@@ -19,11 +17,9 @@
             margin: 0;
             box-sizing: border-box;
         }
-
         body{
             background-color: #080710;
         }
-
         .background{
             width: 430px;
             height: 520px;
@@ -32,14 +28,12 @@
             left: 50%;
             top: 50%;
         }
-
         .background .shape{
             height: 200px;
             width: 200px;
             position: absolute;
             border-radius: 50%;
         }
-
         .shape:first-child{
             background: linear-gradient(
                 #1845ad,
@@ -48,7 +42,6 @@
             left: -80px;
             top: -80px;
         }
-
         .shape:last-child{
             background: linear-gradient(
                 to right,
@@ -56,16 +49,15 @@
                 #f09819
             );
             right: -30px;
-            bottom: -800px;
+            bottom: -80px;
         }
-
         form{
-            height: 1220px;
+            height: 500px;
             width: 400px;
             background-color: rgba(255,255,255,0.13);
             position: absolute;
             transform: translate(-50%,-50%);
-            top: 100%;
+            top: 50%;
             left: 50%;
             border-radius: 10px;
             backdrop-filter: blur(10px);
@@ -73,7 +65,6 @@
             box-shadow: 0 0 40px rgba(8,7,16,0.6);
             padding: 50px 35px;
         }
-
         form *{
             font-family: 'Poppins',sans-serif;
             color: #ffffff;
@@ -81,7 +72,6 @@
             outline: none;
             border: none;
         }
-
         form h3{
             font-size: 32px;
             font-weight: 500;
@@ -95,7 +85,6 @@
             font-size: 16px;
             font-weight: 500;
         }
-
         input{
             display: block;
             height: 50px;
@@ -107,7 +96,9 @@
             font-size: 14px;
             font-weight: 300;
         }
-        
+        /*::placeholder{
+            color: #e5e5e5;
+        }*/
         .button{
             margin-top: 50px;
             width: 100%;
@@ -119,12 +110,10 @@
             border-radius: 5px;
             cursor: pointer;
         }
-
         .social{
           margin-top: 30px;
           display: flex;
         }
-
         .social div{
           background: red;
           width: 100%;
@@ -134,15 +123,12 @@
           color: #eaf0fb;
           text-align: center;
         }
-
         .social div:hover{
           background-color: rgba(255,255,255,0.47);
         }
-
         /*.social .fb{
           margin-left: 25px;
         }*/
-
         .social a{
           text-decoration: none;
         }
@@ -156,59 +142,30 @@
             width: 100%;
             height: 42px;
         }
+
     </style>
 </head>
 <body>
-
     <div class="background">
         <div class="shape"></div>
         <div class="shape"></div>
     </div>
-
-    <form id="addStudentForm" runat="server">
-
+    <form id="addBranchForm" runat="server">
         <div>
             <h3>Add Here</h3>
 
             <br />
-            
-            <asp:Label ID="lbl_status" runat="server" Text="* required fields"></asp:Label>
 
-            <label for="name">Name*</label>
-            <asp:TextBox ID="tb_name" runat="server" placeholder="Name"></asp:TextBox>
+            <asp:Label ID="lbl_status" class="label" runat="server" Text="* please fill required fields"></asp:Label>
 
-            <label for="surname">Surname*</label>
-            <asp:TextBox ID="tb_surname" runat="server" placeholder="Surname"></asp:TextBox>
+            <label for="name">Branch name*</label>
+            <asp:TextBox ID="tb_name" runat="server" placeholder="Name"></asp:TextBox>       
 
-            <label for="fatherName">Father Name*</label>
-            <asp:TextBox ID="tb_fatherName" runat="server" placeholder="Father Name"></asp:TextBox>
-
-            <label for="email">Email*</label>
-            <asp:TextBox ID="tb_email" runat="server" placeholder="Email"></asp:TextBox>            
-
-            <label for="password">Password*</label>
-            <asp:TextBox ID="tb_password" runat="server" placeholder="Password"></asp:TextBox>
-
-            <label for="conpassword">Password confirmation*</label>
-            <asp:TextBox ID="tb_conpassword" runat="server" placeholder="Confirm password"></asp:TextBox>
-
-            <label for="profesion">Choose profesion of student</label>
-            <asp:DropDownList ID="DropDownList_Profesion" class="dropdownlist" runat="server"></asp:DropDownList>
-
-            <label for="date">Choose date of birth*</label>
-            <asp:TextBox ID="tb_date" textmode="Date" runat="server" placeholder="Date"></asp:TextBox>
-
-
-            <asp:Button ID="btn_add" class="button" runat="server" Text="Add" OnClick="btn_add_Click" />
-
+            <asp:Button ID="btn_addBranch" class="button" runat="server" Text="Add" OnClick="btn_addBranch_Click"/>
             <div class="social">
-                <asp:Button ID="btn_Cancel" class="go" runat="server" Text="Cancel" OnClick="btn_Cancel_Click" />
+                <asp:Button ID="btn_Cancel" class="go" runat="server" Text="Cancel" OnClick="btn_Cancel_Click"/>
             </div>
-
         </div>
-
     </form>
-
 </body>
-
 </html>

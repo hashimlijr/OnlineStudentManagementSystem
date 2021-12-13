@@ -16,6 +16,7 @@ namespace OnlineStudentManagementSystem
                 DropDownList_Profesion.Items.Add(profesion.ProfesionName);
             }
         }
+
         public readonly Context context = new Context();
 
         public void ClearFields()
