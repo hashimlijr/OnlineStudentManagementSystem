@@ -1,10 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="OnlineStudentManagementSystem.Register" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="EditInstructor.aspx.cs" Inherits="OnlineStudentManagementSystem.EditInstructor" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Add Student</title>
+    <title>Edit Instructor</title>
 
     <link rel="preconnect" href="https://fonts.gstatic.com"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
@@ -60,7 +60,7 @@
         }
 
         form{
-            height: 1220px;
+            height: 1420px;
             width: 400px;
             background-color: rgba(255,255,255,0.13);
             position: absolute;
@@ -120,6 +120,18 @@
             cursor: pointer;
         }
 
+        .buttonDelete{
+            margin-top: 50px;
+            width: 100%;
+            background-color: #ee4949;
+            color: #eaf0fb;
+            padding: 15px 0;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
         .social{
           margin-top: 30px;
           display: flex;
@@ -140,7 +152,6 @@
           background-color: rgba(255,255,255,0.47);
         }
 
-
         .social a{
           text-decoration: none;
         }
@@ -154,6 +165,11 @@
             width: 100%;
             height: 42px;
         }
+
+        #delete{
+            background: #ee4949;
+            color: #eaf0fb;
+        }
     </style>
 </head>
 <body>
@@ -163,10 +179,10 @@
         <div class="shape"></div>
     </div>
 
-    <form id="addStudentForm" runat="server">
+    <form id="editInstructorForm" runat="server">
 
         <div>
-            <h3>Add Here</h3>
+            <h3>Edit Here</h3>
 
             <br />
             
@@ -190,17 +206,22 @@
             <label for="conpassword">Password confirmation*</label>
             <asp:TextBox ID="tb_conpassword" runat="server" placeholder="Confirm password"></asp:TextBox>
 
-            <label for="profesion">Choose profesion of student</label>
-            <asp:DropDownList ID="DropDownList_Profesion" class="dropdownlist" runat="server"></asp:DropDownList>
+            <label for="branch">Choose branch of instructor</label>
+            <asp:DropDownList ID="DropDownList_Branch" class="dropdownlist" runat="server"></asp:DropDownList>
+
+            <label for="date">Instructor's date of birth*</label>
+            <asp:TextBox ID="tb_currentDate" runat="server" placeholder="Date"></asp:TextBox>
 
             <label for="date">Choose date of birth*</label>
             <asp:TextBox ID="tb_date" textmode="Date" runat="server" placeholder="Date"></asp:TextBox>
 
 
-            <asp:Button ID="btn_add" class="button" runat="server" Text="Add" OnClick="btn_add_Click" />
+            <asp:Button ID="btn_update" class="button" runat="server" Text="Update" OnClick="btn_update_Click"/>
+
+            <asp:Button ID="btn_delete" class="buttonDelete" runat="server" Text="Delete" OnClick="btn_delete_Click"/>
 
             <div class="social">
-                <asp:Button ID="btn_Cancel" class="go" runat="server" Text="Cancel" OnClick="btn_Cancel_Click" />
+                <asp:Button ID="btn_Cancel" class="go" runat="server" Text="Cancel" OnClick="btn_Cancel_Click"/>
             </div>
 
         </div>
@@ -208,5 +229,4 @@
     </form>
 
 </body>
-
 </html>

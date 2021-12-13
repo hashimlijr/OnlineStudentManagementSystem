@@ -21,11 +21,29 @@ namespace OnlineStudentManagementSystem
         public Context context = new Context();
         protected void btn_GetAllStudents_Click(object sender, EventArgs e)
         {
-            var students = context.Students;
+            //var students = context.Students;
+            var students = from student in context.Students select new { student.StudentID, student.StudentName, student.StudentSurname, student.FatherNameOfStudent, student.Email, student.ProfesionId};
             var studentsList = students.ToList();
             gv_Students.DataSource = studentsList;
             gv_Students.DataBind();
         }
 
+        protected void gv_Students_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string idString = gv_Students.SelectedRow.Cells[1].Text;
+            string name = gv_Students.SelectedRow.Cells[2].Text;
+            string surname = gv_Students.SelectedRow.Cells[3].Text;
+            lbl_CurrentStudent.Text = "Selected student: " + idString + " " + name + " " + surname;
+
+            try
+            {
+                int id = Int32.Parse(idString);
+            }
+            catch
+            {
+                lbl_CurrentStudent.Text = "Selected student: Something get wrong :(";
+            }
+            
+        }
     }
 }

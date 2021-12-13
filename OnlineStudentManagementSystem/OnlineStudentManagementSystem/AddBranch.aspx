@@ -113,6 +113,7 @@
         .social{
           margin-top: 30px;
           display: flex;
+          cursor: pointer;
         }
         .social div{
           background: red;

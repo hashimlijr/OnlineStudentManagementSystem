@@ -82,6 +82,11 @@
     <Content Include="AddInstructor.aspx" />
     <Content Include="AddProfesion.aspx" />
     <Content Include="AdminPanel.aspx" />
+    <Content Include="EditBranch.aspx" />
+    <Content Include="EditCourse.aspx" />
+    <Content Include="EditInstructor.aspx" />
+    <Content Include="EditProfesion.aspx" />
+    <Content Include="EditStudent.aspx" />
     <Content Include="Index.aspx" />
     <Content Include="InstructorDashboard.aspx" />
     <Content Include="Login.aspx" />
@@ -127,6 +132,41 @@
     <Compile Include="Branch.cs" />
     <Compile Include="Context.cs" />
     <Compile Include="Course.cs" />
+    <Compile Include="EditBranch.aspx.cs">
+      <DependentUpon>EditBranch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditBranch.aspx.designer.cs">
+      <DependentUpon>EditBranch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditCourse.aspx.cs">
+      <DependentUpon>EditCourse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditCourse.aspx.designer.cs">
+      <DependentUpon>EditCourse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditInstructor.aspx.cs">
+      <DependentUpon>EditInstructor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditInstructor.aspx.designer.cs">
+      <DependentUpon>EditInstructor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditProfesion.aspx.cs">
+      <DependentUpon>EditProfesion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditProfesion.aspx.designer.cs">
+      <DependentUpon>EditProfesion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditStudent.aspx.cs">
+      <DependentUpon>EditStudent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditStudent.aspx.designer.cs">
+      <DependentUpon>EditStudent.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Grade.cs" />
     <Compile Include="Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
