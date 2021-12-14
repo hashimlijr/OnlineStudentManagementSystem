@@ -14,6 +14,20 @@ namespace OnlineStudentManagementSystem
             lbl_status.Visible = false;
         }
         public readonly Context context = new Context();
+
+        public string CheckAdmin(Admin a)
+        {
+            var registeredAdmin = context.Admins.FirstOrDefault(rm => rm.Email.Equals(a.Email) && rm.Password.Equals(a.Password));
+
+            if (registeredAdmin != null)
+            {
+                return "admin";
+            }
+            else
+            {
+                return "notfound";
+            }
+        }
         public string CheckStudent(Student s)
         {
             var registeredStudent = context.Students.FirstOrDefault(i => i.Email.Equals(s.Email) && i.Password.Equals(s.Password));
@@ -47,6 +61,12 @@ namespace OnlineStudentManagementSystem
 
             if(email != "" && password != "")
             {
+                Admin admin = new Admin
+                {
+                    Email = email,
+                    Password = password,
+                };
+
                 Student loginStudent = new Student()
                 {
                     Email = email,
@@ -58,14 +78,20 @@ namespace OnlineStudentManagementSystem
                     Email = email,
                     Password = password,
                 };
-
-                if (CheckStudent(loginStudent) == "student")
+                if (CheckAdmin(admin) == "admin")
                 {
-                    Response.Redirect("Index.aspx");
+                    Response.Redirect("AdminPanel.aspx");
+                }
+                else if (CheckStudent(loginStudent) == "student")
+                {
+                    string id = context.Students.FirstOrDefault(s => s.Email == email).StudentID.ToString();
+                    Response.Redirect("StudentDashboard.aspx?id=" + id);
                 }
                 else if(CheckInstructor(loginInstructor) == "instructor")
                 {
-                    Response.Redirect("InstructorDashboard.aspx");
+                    string id = context.Instructors.FirstOrDefault(i => i.Email == email).InstructorID.ToString();
+
+                    Response.Redirect("InstructorDashboard.aspx?id=" + id);
                 }
                 else
                 {

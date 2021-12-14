@@ -13,11 +13,13 @@ namespace OnlineStudentManagementSystem
 
         }
 
+        public DbSet<Admin> Admins { get; set; }
         public DbSet<Student> Students { get; set; }
         public DbSet<Course> Courses { get; set; }
         public DbSet<Instructor> Instructors { get; set; }
         public DbSet<Grade> Grades { get; set; }
         public DbSet<Profesion> Profesions { get; set; }
+        public DbSet<StudentCourse> StudentCourses { get; set; }
         public DbSet<Branch> Branches { get; set; }
     }
 }

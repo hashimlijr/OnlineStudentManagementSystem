@@ -91,6 +91,7 @@
     <Content Include="InstructorDashboard.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Register.aspx" />
+    <Content Include="StudentDashboard.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -122,6 +123,7 @@
     <Compile Include="AddProfesion.aspx.designer.cs">
       <DependentUpon>AddProfesion.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin.cs" />
     <Compile Include="AdminPanel.aspx.cs">
       <DependentUpon>AdminPanel.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -200,6 +202,14 @@
       <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
     <Compile Include="Student.cs" />
+    <Compile Include="StudentCourse.cs" />
+    <Compile Include="StudentDashboard.aspx.cs">
+      <DependentUpon>StudentDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentDashboard.aspx.designer.cs">
+      <DependentUpon>StudentDashboard.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -33,6 +33,15 @@ namespace OnlineStudentManagementSystem
         public Context context = new Context();
         protected void btn_CreateDB_Click(object sender, EventArgs e)
         {
+            Admin admin = new Admin
+            {
+                AdminName = "Sahil",
+                AdminSurname = "Hashimli",
+                Email = "admin@gmail.com",
+                Password = "admin123",
+            };
+            context.Admins.Add(admin);
+
             Branch branch = new Branch()
             {
                 BranchName = "BranchName",
@@ -46,6 +55,7 @@ namespace OnlineStudentManagementSystem
                 FatherNameOfInstructor = "FatherNameOfInstructor",
                 Email = "instructor@gmail.com",
                 Password = "instructor123",
+                BranchId = 1,
             };
             context.Instructors.Add(instructor);
 
@@ -66,21 +76,56 @@ namespace OnlineStudentManagementSystem
                 StudentName = "StudentName",
                 StudentSurname = "StudentSurname",
                 FatherNameOfStudent = "FatherNameOfStudent",
-                Email = "email@gmail.com",
-                Password = "password",
+                Email = "student@gmail.com",
+                Password = "student",
                 ProfesionId = 1,
             };
             context.Students.Add(studenttest);
 
-            
 
-            //Grade grade = new Grade()
+
+
+
+            //grade.CourseID = 2;
+            //grade.GradeScore = 91;
+            //context.Grades.Add(grade);
+
+            //grade.StudentID = 2;
+            //grade.CourseID = 2;
+            //grade.GradeScore = 100;
+
+            //Student student1 = context.Students.FirstOrDefault(s => s.StudentID == 1);
+            //Course course1 = context.Courses.FirstOrDefault(c => c.CourseID == 1);
+            //Grade grade1 = new Grade()
             //{
-            //    StudentID = 1,
-            //    CourseID = 1,
+            //    StudentID = student1.StudentID,
+            //    CourseID = course1.CourseID,
             //    GradeScore = 98,
             //};
-            //context.Grades.Add(grade);
+
+            //context.Grades.Add(grade1);
+            //Grade grade2 = new Grade()
+            //{
+
+            //    GradeScore = 75,
+            //}; 
+
+            //Grade grade3 = new Grade()
+            //{
+            //    GradeScore = 100,
+            //};
+            //List<Grade> grades = new List
+            //{
+            //    new Grade
+            //    {
+            //        GradeScore = 98,
+            //    }
+            //};
+
+            //student1.Grades = new List<Grade>();
+            //student1.Grades.Add(grade1);
+            //student1.Grades.Add(grade2);
+            //student1.Grades.Add(grade3);
 
             context.SaveChanges();
         }

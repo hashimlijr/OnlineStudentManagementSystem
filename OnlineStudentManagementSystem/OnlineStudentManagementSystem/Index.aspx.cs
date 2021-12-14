@@ -15,5 +15,9 @@ namespace OnlineStudentManagementSystem
         }
         public Context context = new Context();
 
+        protected void btn_SignIn_Click(object sender, EventArgs e)
+        {            
+            Response.Redirect("Login.aspx");
+        }
     }
 }

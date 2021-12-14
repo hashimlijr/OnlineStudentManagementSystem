@@ -27,12 +27,17 @@ namespace OnlineStudentManagementSystem
         
         public int ProfesionId { get; set; }
 
+        public Profesion Profesion { get; set; }
+
         // Courses
         public ICollection<Course> Courses { get; set; }
+
+        public Course Course { get; set; }
 
         // Grades
         public ICollection<Grade> Grades { get; set; }
 
+        public Grade Grade { get; set; }
         // Attendance
     }
 }

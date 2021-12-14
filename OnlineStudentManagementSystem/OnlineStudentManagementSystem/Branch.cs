@@ -14,5 +14,7 @@ namespace OnlineStudentManagementSystem
         public string BranchName { get; set; }
 
         public ICollection<Instructor> Instructors { get; set; }
+
+        public Instructor Instructor { get; set; }
     }
 }

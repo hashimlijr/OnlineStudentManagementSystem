@@ -66,7 +66,10 @@
             <asp:DropDownList ID="ddl_Course" runat="server"></asp:DropDownList>
             <br />
             <br />
-            <asp:Button ID="btn_GetStudentsFromCourse" runat="server" Text="Get Students From Course" />
+            <asp:Button ID="btn_GetStudentsFromCourse" runat="server" Text="Get Students From Course" OnClick="btn_GetStudentsFromCourse_Click" />
+            <br />
+            <br />
+            <asp:Button ID="btn_AddGrade" runat="server" Text="Grade" OnClick="btn_AddGrade_Click"/>
             <br />
             <br />
             <asp:Label ID="lbl_CurrentStudent" runat="server" Text="Selected student:"></asp:Label>
@@ -75,8 +78,11 @@
             <div class="table-wrapper">
                 <div class="fl-table">
                     <asp:GridView ID="gv_Students" runat="server" OnSelectedIndexChanged="gv_Students_SelectedIndexChanged" AutoGenerateSelectButton="True" Width="406px"></asp:GridView>
+                    <asp:GridView ID="gv_Grades" runat="server" AutoGenerateSelectButton="True" Width="406px" OnSelectedIndexChanged="gv_Grades_SelectedIndexChanged"></asp:GridView>
+                    
                 </div>
             </div>
+            <asp:Label ID="lbl_Score" runat="server" Text="Score:  "></asp:Label><asp:TextBox ID="tb_Score" runat="server"></asp:TextBox>
             
             
 

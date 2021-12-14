@@ -18,8 +18,12 @@ namespace OnlineStudentManagementSystem
 
         // Students
         public ICollection<Student> Students { get; set; }
+
+        public Student Student { get; set; }
         
         // Grade
         public ICollection<Grade> Grades { get; set; }
+
+        public Grade Grade { get; set; }
     }
 }

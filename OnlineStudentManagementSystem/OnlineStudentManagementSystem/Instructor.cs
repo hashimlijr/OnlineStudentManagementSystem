@@ -19,6 +19,7 @@ namespace OnlineStudentManagementSystem
         public DateTime? DateOfBirth { get; set; }
         
         public int BranchId { get; set; }
+        public Branch Branch { get; set; }
         [Required]
         public string Email { get; set; }
         //public byte[] Photo { get; set; }
@@ -27,5 +28,7 @@ namespace OnlineStudentManagementSystem
 
         // Courses
         public ICollection<Course> Courses { get; set; }
+
+        public Course Course { get; set; }
     }
 }
