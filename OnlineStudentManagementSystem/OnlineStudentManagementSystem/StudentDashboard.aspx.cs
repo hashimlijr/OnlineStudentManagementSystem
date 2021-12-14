@@ -11,7 +11,7 @@ namespace OnlineStudentManagementSystem
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            int id = Int32.Parse(Request.QueryString["id"]);
+            int id = Int32.Parse(Session["user"].ToString());
             Student student = context.Students.FirstOrDefault(s => s.StudentID == id);
             lbl_fullName.Text = student.StudentName + " " + student.StudentSurname;
 
@@ -21,7 +21,7 @@ namespace OnlineStudentManagementSystem
         public readonly Context context = new Context();
         protected void btn_Grades_Click(object sender, EventArgs e)
         {
-            int id = Int32.Parse(Request.QueryString["id"]);
+            //int id = Int32.Parse(Request.QueryString["id"]);
             var grades = from grade in context.Grades select new { grade.GradeID, grade.StudentID, grade.CourseID, grade.GradeScore };
             var gradesList = grades.ToList();
             gv_Grades.DataSource = gradesList;
@@ -40,7 +40,7 @@ namespace OnlineStudentManagementSystem
 
         protected void gv_Courses_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int id = Int32.Parse(Request.QueryString["id"]);
+            int id = Int32.Parse(Session["user"].ToString());
             Student student = context.Students.FirstOrDefault(s => s.StudentID == id);
 
             int courseId = Int32.Parse(gv_Courses.SelectedRow.Cells[1].Text);

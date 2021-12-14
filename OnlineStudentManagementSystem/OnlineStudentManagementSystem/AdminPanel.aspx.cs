@@ -169,6 +169,7 @@ namespace OnlineStudentManagementSystem
 
             try
             {
+                Session["user"] = idString;
                 Response.Redirect("EditStudent.aspx?id=" + idString);
             }
             catch
@@ -191,6 +192,7 @@ namespace OnlineStudentManagementSystem
 
             try
             {
+                Session["user"] = idString;
                 Response.Redirect("EditInstructor.aspx?id=" + idString);
             }
             catch
@@ -229,6 +231,7 @@ namespace OnlineStudentManagementSystem
 
             try
             {
+                Session["user"] = idString;
                 Response.Redirect("EditCourse.aspx?id=" + idString);
             }
             catch
@@ -243,6 +246,7 @@ namespace OnlineStudentManagementSystem
 
             try
             {
+                Session["user"] = idString;
                 Response.Redirect("EditBranch.aspx?id=" + idString);
             }
             catch
@@ -257,6 +261,7 @@ namespace OnlineStudentManagementSystem
 
             try
             {
+                Session["user"] = idString;
                 Response.Redirect("EditProfesion.aspx?id=" + idString);
             }
             catch

@@ -175,7 +175,7 @@
             <label for="name">Branch name*</label>
             <asp:TextBox ID="tb_name" runat="server" placeholder="Name"></asp:TextBox>       
 
-            <asp:Button ID="btn_update" class="button" runat="server" Text="Add" OnClick="btn_update_Click"/>
+            <asp:Button ID="btn_update" class="button" runat="server" Text="Update" OnClick="btn_update_Click"/>
 
             <asp:Button ID="btn_delete" class="buttonDelete" runat="server" Text="Delete" OnClick="btn_delete_Click"/>
 

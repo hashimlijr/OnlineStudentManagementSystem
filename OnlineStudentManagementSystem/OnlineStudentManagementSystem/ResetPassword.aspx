@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="OnlineStudentManagementSystem.Login" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ResetPassword.aspx.cs" Inherits="OnlineStudentManagementSystem.ResetPassword" %>
 
 <!DOCTYPE html>
 
@@ -144,22 +144,24 @@
         <div class="shape"></div>
         <div class="shape"></div>
     </div>
-    <form id="loginForm" runat="server">
+    <form id="resetForm" runat="server">
         <div>
-            <h3>Login Here</h3>
+            <h3>Reset Here</h3>
+
+            <br />
+
+            <asp:Label ID="lbl_status" class="label" runat="server" Text="Enter your email address."></asp:Label>
 
             <label for="email">Email</label>
             <asp:TextBox ID="tb_email" runat="server" placeholder="Email"></asp:TextBox>
+            
+            <asp:TextBox ID="tb_code" runat="server" placeholder="Reset Code"></asp:TextBox>
 
-            <label for="password">Password</label>
-            <asp:TextBox ID="tb_password" runat="server" placeholder="Password"></asp:TextBox>
-
-            <asp:Label ID="lbl_status" class="label" runat="server" Text="Status"></asp:Label>
-
-            <asp:Button ID="btn_login" class="button" runat="server" Text="Sign in" OnClick="btn_login_Click" />
+            <asp:Button ID="btn_send" class="button" runat="server" Text="Send" OnClick="btn_send_Click" />
+            <asp:Button ID="btn_submit" class="button" runat="server" Text="Submit" OnClick="btn_submit_Click"/>
 
             <div class="social">                
-                    <asp:Button ID="btn_ResetPassword" class="social" runat="server" Text="Forget password?" OnClick="btn_ResetPassword_Click" />             
+                    <asp:Button ID="btn_cancel" class="social" runat="server" Text="Cancel" OnClick="btn_cancel_Click" />             
             </div>
         </div>
     </form>

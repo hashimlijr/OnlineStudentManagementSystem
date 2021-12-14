@@ -1,10 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="OnlineStudentManagementSystem.Login" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="NewPassword.aspx.cs" Inherits="OnlineStudentManagementSystem.NewPassword" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Sign in</title>
+    <title>New Password</title>
     <link rel="preconnect" href="https://fonts.gstatic.com"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet"/>
@@ -144,22 +144,25 @@
         <div class="shape"></div>
         <div class="shape"></div>
     </div>
-    <form id="loginForm" runat="server">
+    <form id="newPasswordForm" runat="server">
         <div>
-            <h3>Login Here</h3>
+            <h3>Confirm Here</h3>
+            <br />
+            
+            <asp:Label ID="lbl_status" class="label" runat="server" Text="* required fields"></asp:Label>
 
-            <label for="email">Email</label>
-            <asp:TextBox ID="tb_email" runat="server" placeholder="Email"></asp:TextBox>
-
-            <label for="password">Password</label>
+            <label for="password">New Password*</label>
             <asp:TextBox ID="tb_password" runat="server" placeholder="Password"></asp:TextBox>
 
-            <asp:Label ID="lbl_status" class="label" runat="server" Text="Status"></asp:Label>
+            <label for="coPassword">Confirm Password*</label>
+            <asp:TextBox ID="tb_coPassword" runat="server" placeholder="Confirm Password"></asp:TextBox>
 
-            <asp:Button ID="btn_login" class="button" runat="server" Text="Sign in" OnClick="btn_login_Click" />
+
+            <asp:Button ID="btn_confirm" class="button" runat="server" Text="Confirm" OnClick="btn_confirm_Click"/>
+            <asp:Button ID="btn_ToLogin" class="social" runat="server" Text="Back to login" OnClick="btn_ToLogin_Click"/>
 
             <div class="social">                
-                    <asp:Button ID="btn_ResetPassword" class="social" runat="server" Text="Forget password?" OnClick="btn_ResetPassword_Click" />             
+                    <asp:Button ID="btn_Cancel" class="social" runat="server" Text="Cancel" OnClick="btn_Cancel_Click"/>             
             </div>
         </div>
     </form>

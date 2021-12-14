@@ -21,7 +21,7 @@ namespace OnlineStudentManagementSystem
 
         public void GetDefaultData()
         {
-            string idString = Request.QueryString["id"];
+            string idString = Session["user"].ToString();
 
             try
             {
@@ -42,7 +42,7 @@ namespace OnlineStudentManagementSystem
 
         protected void btn_delete_Click(object sender, EventArgs e)
         {
-            string idStringforDelete = Request.QueryString["id"];
+            string idStringforDelete = Session["user"].ToString();
             int idforDelete = Int32.Parse(idStringforDelete);
             Profesion profesion = context.Profesions.FirstOrDefault(p => p.ProfesionId == idforDelete);
 
@@ -53,7 +53,7 @@ namespace OnlineStudentManagementSystem
 
         protected void btn_update_Click(object sender, EventArgs e)
         {
-            string idStringforUpdate = Request.QueryString["id"];
+            string idStringforUpdate = Session["user"].ToString();
             int idforUpdate = Int32.Parse(idStringforUpdate);
             Profesion profesion = context.Profesions.FirstOrDefault(p => p.ProfesionId == idforUpdate);
 

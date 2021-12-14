@@ -12,6 +12,10 @@ namespace OnlineStudentManagementSystem
         protected void Page_Load(object sender, EventArgs e)
         {
             lbl_status.Visible = false;
+            if(Session["user"] != null)
+            {
+                Response.Redirect("Index.aspx");
+            }
         }
         public readonly Context context = new Context();
 
@@ -84,7 +88,8 @@ namespace OnlineStudentManagementSystem
                 }
                 else if (CheckStudent(loginStudent) == "student")
                 {
-                    string id = context.Students.FirstOrDefault(s => s.Email == email).StudentID.ToString();
+                    int id = context.Students.FirstOrDefault(s => s.Email == email).StudentID;
+                    Session["user"] = id;
                     Response.Redirect("StudentDashboard.aspx?id=" + id);
                 }
                 else if(CheckInstructor(loginInstructor) == "instructor")
@@ -104,6 +109,11 @@ namespace OnlineStudentManagementSystem
                 lbl_status.Text = "Please fill all fields.";
                 lbl_status.Visible = true;
             }
+        }
+
+        protected void btn_ResetPassword_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ResetPassword.aspx");
         }
     }
 }
