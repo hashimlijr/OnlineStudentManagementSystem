@@ -19,18 +19,37 @@ namespace OnlineStudentManagementSystem
             lbl_profesion.Text = profesion.ProfesionName;
         }
         public readonly Context context = new Context();
+
+        public void ClearOtherTables(string table)
+        {
+            switch (table)
+            {
+                case "grade":
+                    gv_Courses.Visible = false;
+                    gv_Grades.Visible = true;
+                    return;
+                case "course":
+                    gv_Grades.Visible = true;
+                    gv_Courses.Visible = false;
+                    return;
+            }
+        }
         protected void btn_Grades_Click(object sender, EventArgs e)
         {
-            //int id = Int32.Parse(Request.QueryString["id"]);
-            var grades = from grade in context.Grades select new { grade.GradeID, grade.StudentID, grade.CourseID, grade.GradeScore };
-            var gradesList = grades.ToList();
-            gv_Grades.DataSource = gradesList;
-            gv_Grades.DataBind();
+            //ClearOtherTables("grade");
+            int id = Int32.Parse(Session["user"].ToString());
+            var gradesList = context.Grades.Where(g => g.StudentID == id).ToList();
+            if(gradesList != null)
+            {
+                gv_Grades.DataSource = gradesList;
+                gv_Grades.DataBind();
+            }
+            
         }
 
         protected void btn_Course_Click(object sender, EventArgs e)
         {
-
+            //ClearOtherTables("course");
             var courses = context.Courses;
             var courseList = courses.ToList();
             gv_Courses.DataSource = courseList;

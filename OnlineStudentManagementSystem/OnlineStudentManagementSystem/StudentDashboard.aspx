@@ -126,9 +126,9 @@
 	        color: #a2ecff;
         }
         .main{
-            margin-left: 30%;
+            margin-left: 10%;
             margin-top: 10%;
-            padding-top: 15%;
+            padding-top: 5%;
             padding-right: 50%;
             padding-bottom: 10%;
             font-size: 24px;

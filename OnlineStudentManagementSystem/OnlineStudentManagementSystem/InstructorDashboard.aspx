@@ -126,12 +126,12 @@
 	        color: #a2ecff;
         }
         .main{
-            margin-left: 30%;
+            margin-left: 10%;
             margin-top: 10%;
-            padding-top: 15%;
+            padding-top: 5%;
             padding-right: 50%;
             padding-bottom: 10%;
-            font-size: 24px;
+            font-size: 16px;
         }
 
         .dashboard{
@@ -213,9 +213,9 @@
         <div class="dashboard">
             <h1>Dashboard</h1>
             <div class="main">
-                <asp:Label ID="lbl_CurrentStudent" runat="server" Text="Selected student:"></asp:Label>
-                <asp:TextBox ID="tb_Score" runat="server"></asp:TextBox>
-                <asp:GridView ID="gv_Students" runat="server" OnSelectedIndexChanged="gv_Students_SelectedIndexChanged" AutoGenerateSelectButton="True" Width="406px"></asp:GridView>
+                <%--<asp:Label ID="lbl_CurrentStudent" runat="server" Text="Selected student:"></asp:Label>--%>
+                <%--<asp:TextBox ID="tb_Score" runat="server"></asp:TextBox>--%>
+                <asp:GridView ID="gv_Students" runat="server" Width="406px"></asp:GridView>
                 <asp:GridView ID="gv_Grades" runat="server" AutoGenerateSelectButton="True" Width="406px" OnSelectedIndexChanged="gv_Grades_SelectedIndexChanged"></asp:GridView>
             </div>
         </div>

@@ -77,11 +77,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="About.aspx" />
     <Content Include="AddBranch.aspx" />
     <Content Include="AddCourse.aspx" />
     <Content Include="AddInstructor.aspx" />
     <Content Include="AddProfesion.aspx" />
     <Content Include="AdminPanel.aspx" />
+    <Content Include="AssignGrade.aspx" />
+    <Content Include="Contact.aspx" />
     <Content Include="EditBranch.aspx" />
     <Content Include="EditCourse.aspx" />
     <Content Include="EditInstructor.aspx" />
@@ -97,6 +100,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AddBranch.aspx.cs">
       <DependentUpon>AddBranch.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -133,7 +143,21 @@
     <Compile Include="AdminPanel.aspx.designer.cs">
       <DependentUpon>AdminPanel.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AssignGrade.aspx.cs">
+      <DependentUpon>AssignGrade.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AssignGrade.aspx.designer.cs">
+      <DependentUpon>AssignGrade.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Branch.cs" />
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Context.cs" />
     <Compile Include="Course.cs" />
     <Compile Include="EditBranch.aspx.cs">

@@ -57,7 +57,6 @@ namespace OnlineStudentManagementSystem
             try
             {
                 string to = tb_email.Text;
-                string email = to;
                 string from = "sahilhashimli2@gmail.com";
                 string pass = "sahil1234@";
                 string code = generateCode().ToString();

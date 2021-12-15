@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Index.aspx.cs" Inherits="OnlineStudentManagementSystem.Index" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Contact.aspx.cs" Inherits="OnlineStudentManagementSystem.Contact" %>
 
 <!DOCTYPE html>
 
@@ -36,6 +36,36 @@
             display: flex;
             align-items: center;
             box-shadow: 0 0 25px 0 black;
+        }
+        form *{
+            letter-spacing: 0.5px;
+            outline: none;
+            border: none;
+        }
+
+        input{
+            display: block;
+            height: 50px;
+            width: 200px;
+            background-color: rgba(211, 212, 218, 0.56);
+            border-radius: 3px;
+            padding: 0 10px;
+            margin-top: 8px;
+            font-size: 14px;
+            font-weight: 300;
+        }
+
+        .input {
+            display: block;
+            height: 150px;
+            width: 300px;
+            background-color: rgba(211, 212, 218, 0.56);
+            border-radius: 3px;
+            padding: 0 10px;
+            margin-top: 8px;
+            font-size: 18px;
+            font-weight: 300;
+            font-family: sans-serif;
         }
 
         header * {
@@ -79,7 +109,7 @@
             margin-bottom: 30px;
         }
 
-        .welcome{
+        .main{
             text-align: left;
             font-family: serif;
             border-left-style: solid;
@@ -102,24 +132,34 @@
     </style>
 </head>
 <body>
-    <form id="formIndex" runat="server">
+    <form id="formContact" runat="server">
         <div>
             <header>
             <nav>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="About.aspx">About</a></li>
-                    <li><a href="Contact.aspx">Contact</a></li>
+                    <li><a href="Index.aspx">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
                 </ul>               
             </nav>
         </header>
         </div>
-        <div class="welcome">
-            <h1>Welcome!</h1>
-            <h2>Student Management System</h2>
-            <h3>Glad to see you! Please sign in to continue.</h3>
+        <div class="main">
+            <h1>Contact us</h1>
+            <h4>Please write your name and email. After this you can write your feedbacks.</h4>
+            <asp:Label ID="lbl_Status" runat="server" Text="Status"></asp:Label>
+            <br />
 
-            <asp:Button ID="btn_SignIn" class="button" runat="server" Text="Sign In" OnClick="btn_SignIn_Click" />
+            <asp:TextBox ID="tb_Name" runat="server" placeholder="Your name*"></asp:TextBox>
+            <br />
+
+            <asp:TextBox ID="tb_Email" runat="server" placeholder="Your email*"></asp:TextBox>
+            <br />
+
+            <asp:TextBox ID="tb_data" runat="server" class="input" placeholder="Your feedbacks or questions" TextMode="MultiLine" Rows="10"></asp:TextBox>
+            <br />
+
+            <asp:Button ID="btn_Send" runat="server" class="button" Text="Send" OnClick="btn_Send_Click" />
         </div>
     </form>
 </body>

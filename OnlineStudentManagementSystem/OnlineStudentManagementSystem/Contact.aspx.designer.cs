@@ -11,88 +11,61 @@ namespace OnlineStudentManagementSystem
 {
 
 
-    public partial class InstructorDashboard
+    public partial class Contact
     {
 
         /// <summary>
-        /// studentDashboardForm control.
+        /// formContact control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm studentDashboardForm;
+        protected global::System.Web.UI.HtmlControls.HtmlForm formContact;
 
         /// <summary>
-        /// lbl_fullName control.
+        /// lbl_Status control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_fullName;
+        protected global::System.Web.UI.WebControls.Label lbl_Status;
 
         /// <summary>
-        /// lbl_profesion control.
+        /// tb_Name control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_profesion;
+        protected global::System.Web.UI.WebControls.TextBox tb_Name;
 
         /// <summary>
-        /// btn_Profile control.
+        /// tb_Email control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_Profile;
+        protected global::System.Web.UI.WebControls.TextBox tb_Email;
 
         /// <summary>
-        /// btn_GetAllStudents control.
+        /// tb_data control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_GetAllStudents;
+        protected global::System.Web.UI.WebControls.TextBox tb_data;
 
         /// <summary>
-        /// btn_AddGrade control.
+        /// btn_Send control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_AddGrade;
-
-        /// <summary>
-        /// btn_Logout control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_Logout;
-
-        /// <summary>
-        /// gv_Students control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gv_Students;
-
-        /// <summary>
-        /// gv_Grades control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gv_Grades;
+        protected global::System.Web.UI.WebControls.Button btn_Send;
     }
 }
