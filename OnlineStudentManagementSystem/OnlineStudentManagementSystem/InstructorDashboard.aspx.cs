@@ -11,14 +11,7 @@ namespace OnlineStudentManagementSystem
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            lbl_Score.Visible = false;
-            tb_Score.Visible = false;
-            var courses = context.Courses.ToList();
-
-            foreach(var course in courses)
-            {
-                ddl_Course.Items.Add(course.CourseName);
-            }
+            tb_Score.Visible = false;            
         }
         public Context context = new Context();
         protected void btn_GetAllStudents_Click(object sender, EventArgs e)
@@ -48,15 +41,6 @@ namespace OnlineStudentManagementSystem
             
         }
 
-        protected void btn_GetStudentsFromCourse_Click(object sender, EventArgs e)
-        {
-            //string courseName = ddl_Course.SelectedValue;
-
-            //var students = from student in context.Students select new { student.Course.CourseName == courseName };
-            //var studentList = students.ToList();
-            //gv_Students.DataSource = studentList;
-            //gv_Students.DataBind();
-        }
 
         protected void btn_AddGrade_Click(object sender, EventArgs e)
         {
@@ -64,27 +48,31 @@ namespace OnlineStudentManagementSystem
             var studentsList = students.ToList();
             gv_Grades.DataSource = studentsList;
             gv_Grades.DataBind();
-            lbl_Score.Visible = true;
-            tb_Score.Visible = true;
 
         }
 
         protected void gv_Grades_SelectedIndexChanged(object sender, EventArgs e)
         {
             
-            int score = Int32.Parse(tb_Score.Text);
-            int studentId = Int32.Parse(gv_Grades.SelectedRow.Cells[1].Text);
+            //int score = Int32.Parse(tb_Score.Text);
+            //int studentId = Int32.Parse(gv_Grades.SelectedRow.Cells[1].Text);
 
-            Grade grade = new Grade
-            {
-                StudentID = studentId,
-                CourseID = 1,
-                GradeScore = score,
-            };
+            //Grade grade = new Grade
+            //{
+            //    StudentID = studentId,
+            //    CourseID = 1,
+            //    GradeScore = score,
+            //};
 
-            context.Grades.Add(grade);
-            context.SaveChanges();
+            //context.Grades.Add(grade);
+            //context.SaveChanges();
 
+        }
+
+        protected void btn_Logout_Click(object sender, EventArgs e)
+        {
+            Session.Abandon();
+            Response.Redirect("Index.aspx");
         }
     }
 }

@@ -15,13 +15,40 @@ namespace OnlineStudentManagementSystem
     {
 
         /// <summary>
-        /// instructorDashboardForm control.
+        /// studentDashboardForm control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm instructorDashboardForm;
+        protected global::System.Web.UI.HtmlControls.HtmlForm studentDashboardForm;
+
+        /// <summary>
+        /// lbl_fullName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_fullName;
+
+        /// <summary>
+        /// lbl_profesion control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_profesion;
+
+        /// <summary>
+        /// btn_Profile control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_Profile;
 
         /// <summary>
         /// btn_GetAllStudents control.
@@ -33,24 +60,6 @@ namespace OnlineStudentManagementSystem
         protected global::System.Web.UI.WebControls.Button btn_GetAllStudents;
 
         /// <summary>
-        /// ddl_Course control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddl_Course;
-
-        /// <summary>
-        /// btn_GetStudentsFromCourse control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_GetStudentsFromCourse;
-
-        /// <summary>
         /// btn_AddGrade control.
         /// </summary>
         /// <remarks>
@@ -60,6 +69,15 @@ namespace OnlineStudentManagementSystem
         protected global::System.Web.UI.WebControls.Button btn_AddGrade;
 
         /// <summary>
+        /// btn_Logout control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_Logout;
+
+        /// <summary>
         /// lbl_CurrentStudent control.
         /// </summary>
         /// <remarks>
@@ -67,6 +85,15 @@ namespace OnlineStudentManagementSystem
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbl_CurrentStudent;
+
+        /// <summary>
+        /// tb_Score control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tb_Score;
 
         /// <summary>
         /// gv_Students control.
@@ -85,23 +112,5 @@ namespace OnlineStudentManagementSystem
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView gv_Grades;
-
-        /// <summary>
-        /// lbl_Score control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_Score;
-
-        /// <summary>
-        /// tb_Score control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_Score;
     }
 }

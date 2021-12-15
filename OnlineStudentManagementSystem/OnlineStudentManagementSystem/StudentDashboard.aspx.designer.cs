@@ -69,6 +69,15 @@ namespace OnlineStudentManagementSystem
         protected global::System.Web.UI.WebControls.Button btn_Grades;
 
         /// <summary>
+        /// btn_Logout control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_Logout;
+
+        /// <summary>
         /// gv_Courses control.
         /// </summary>
         /// <remarks>

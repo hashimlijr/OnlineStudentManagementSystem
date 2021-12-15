@@ -153,64 +153,59 @@
 </head>
 <body>
     <form id="studentDashboardForm" runat="server"> 
+
             <div class="wrapper">
+
              <!--Top Menu & Menu button-->
+
                 <div class="sidebar">
+
                     <div class="profile">
+
                         <!--Profile Image-->
+
                         <img src="https://www.kindpng.com/picc/m/171-1712282_profile-icon-png-profile-icon-vector-png-transparent.png" alt="profile_picture" />
-                        <!--Profile Title & Descruption-->                        
+
+                        <!--Profile Title & Descruption--> 
+                        
                         <h3>
                             <asp:Label ID="lbl_fullName" runat="server" Text="Full Name"></asp:Label>
                         </h3>
+
                         <p>
                             <asp:Label ID="lbl_profesion" runat="server" Text="Profesion"></asp:Label>
                         </p>
+
                     </div>
+
                      <!--Menu item-->
                         <ul>
+
                                 <li>
                                     <a href="#" class="active">
                                         <span class="icon"><i class="fas fa-home"></i></span>
                                         <span class="item">My Dashboard</span>
                                     </a>
                                 </li>
-                                <%--<li>
-                                    <a href="#">
-                                        <span class="icon"><i class="fas fa-desktop"></i></span>
-                                        <span class="item">Profile</span>
-                                    </a>
-                                </li>--%>
-                                <%--<li>
-                                    <a href="#">
-                                        <span class="icon"><i class="fas fa-user-friends"></i></span>
-                                        <span class="item">
-                                            Profile                                          
-                                        </span>
-                                    </a>
-                                </li>--%>
+                            
                                 <li>
                                     <asp:Button ID="btn_Profile" class="button" runat="server" Text="Profile" />  
                                 </li>
+
                                 <li>
                                     <asp:Button ID="btn_Course" class="button" runat="server" Text="Course registeration" OnClick="btn_Course_Click" />                                      
                                 </li>
+
                                 <li>
                                     <asp:Button ID="btn_Grades" class="button" runat="server" Text="Grades" OnClick="btn_Grades_Click" />                                      
                                 </li>
-                                <%--<li>
-                                    <a href="#">
-                                        <span class="icon"><i class="fas fa-user-shield"></i></span>
-                                        <span class="item">Admin</span>
-                                    </a>
-                                </li>
+
                                 <li>
-                                    <a href="#">
-                                        <span class="icon"><i class="fas fa-cog"></i></span>
-                                        <span class="item">Settings</span>
-                                    </a>
-                                </li>--%>
+                                    <asp:Button ID="btn_Logout" class="button" runat="server" Text="Log Out" OnClick="btn_Logout_Click"/>                                                                          
+                                </li>
+
                 </ul>
+
                </div>
         
             </div>
@@ -222,25 +217,6 @@
                 <asp:GridView ID="gv_Grades" class="main" runat="server"></asp:GridView>
             </div>
         </div>
-
-        
-
-
-
-        <%--<div class="section">
-            <div class="top_navbar">
-                <div class="hamburger">
-                    <a href="#">
-                        <i class="fas fa-bars"></i>
-                    </a>
-                </div>
-            </div>--%>
-             
-        <%--</div>--%>
-          <script>
-     
-          </script>
-
     </form>
 </body>
 </html>
