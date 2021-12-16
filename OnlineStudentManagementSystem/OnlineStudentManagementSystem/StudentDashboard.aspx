@@ -164,7 +164,7 @@
 
                         <!--Profile Image-->
 
-                        <img src="https://www.kindpng.com/picc/m/171-1712282_profile-icon-png-profile-icon-vector-png-transparent.png" alt="profile_picture" />
+                        <img src="images/defaultProfile.png" alt="profile_picture" />
 
                         <!--Profile Title & Descruption--> 
                         
@@ -212,6 +212,7 @@
 
         <div class="dashboard">
             <h1>Dashboard</h1>
+            <asp:Label ID="lbl_status" runat="server" Text=""></asp:Label>
             <div class="main">
                 <asp:GridView ID="gv_Courses" runat="server" AutoGenerateSelectButton="True" OnSelectedIndexChanged="gv_Courses_SelectedIndexChanged"></asp:GridView>
                 <asp:GridView ID="gv_Grades" class="main" runat="server"></asp:GridView>

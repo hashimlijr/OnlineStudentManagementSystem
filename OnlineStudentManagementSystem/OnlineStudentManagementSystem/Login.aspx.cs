@@ -84,18 +84,23 @@ namespace OnlineStudentManagementSystem
                 };
                 if (CheckAdmin(admin) == "admin")
                 {
+                    int id = context.Admins.FirstOrDefault(a => a.Email == email).AdminID;
+                    Session["user"] = id;
+                    Session["email"] = email;
                     Response.Redirect("AdminPanel.aspx");
                 }
                 else if (CheckStudent(loginStudent) == "student")
                 {
                     int id = context.Students.FirstOrDefault(s => s.Email == email).StudentID;
                     Session["user"] = id;
+                    Session["email"] = email;
                     Response.Redirect("StudentDashboard.aspx?id=" + id);
                 }
                 else if(CheckInstructor(loginInstructor) == "instructor")
                 {
                     string id = context.Instructors.FirstOrDefault(i => i.Email == email).InstructorID.ToString();
-
+                    Session["user"] = id;
+                    Session["email"] = email;
                     Response.Redirect("InstructorDashboard.aspx?id=" + id);
                 }
                 else

@@ -12,7 +12,7 @@
         }
         body {
             height: 85vh;
-            background-image: url('https://unblast.com/wp-content/uploads/2020/05/University-Life-Illustration-1.jpg');
+            background-image: url('images/contactBackground.png');
             background-size: 800px,600px;
             font-family: sans-serif;
             margin-top: 80px;
@@ -138,8 +138,8 @@
             <nav>
                 <ul>
                     <li><a href="Index.aspx">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="About.aspx">About</a></li>
+                    <li><a href="Contact.aspx">Contact</a></li>
                 </ul>               
             </nav>
         </header>

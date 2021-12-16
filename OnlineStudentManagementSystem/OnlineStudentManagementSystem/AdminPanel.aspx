@@ -21,6 +21,10 @@
         main {
             color: white;
         }
+        
+        table{
+            color: black;
+        }
 
         header {
             background-color: white;
@@ -46,9 +50,15 @@
             align-items: flex-end;
         }
 
-        header li a {
+        .atag{            
             color: black;
             text-decoration: none;
+            background: white;
+            border-block-style: hidden;
+            border-block-color: white;
+            cursor: pointer;
+            font-size: 14px;
+            border: white;
         }
 
         .right{
@@ -98,9 +108,10 @@
             <header>
             <nav>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="Index.aspx">Log Out</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#" class="atag" >Home</a></li>
+                    <li>
+                        <asp:Button ID="btn_Logout" class="atag" runat="server" Text="Log Out" OnClick="btn_Logout_Click" />
+                    </li>
                 </ul>       
             </nav>
         </header>

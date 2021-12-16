@@ -10,8 +10,11 @@ namespace OnlineStudentManagementSystem
     public partial class Index : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
-        {
-
+        {            
+            if (Session["user"] != null)
+            {
+                Response.Redirect("IndexAfterLogin.aspx");
+            }
         }
         public Context context = new Context();
 

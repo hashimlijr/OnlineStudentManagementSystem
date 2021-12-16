@@ -164,7 +164,7 @@
 
                         <!--Profile Image-->
 
-                        <img src="https://www.kindpng.com/picc/m/171-1712282_profile-icon-png-profile-icon-vector-png-transparent.png" alt="profile_picture" />
+                        <img src="images/defaultProfile.png" alt="profile_picture" />
 
                         <!--Profile Title & Descruption--> 
                         

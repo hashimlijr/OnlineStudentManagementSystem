@@ -13,11 +13,21 @@ namespace OnlineStudentManagementSystem
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            tb_code.Visible = false;
-            btn_submit.Visible = false;
-            btn_send.Visible = true;
+            if (visibility)
+            {
+                tb_code.Visible = true;
+                btn_submit.Visible = true;
+                btn_send.Visible = false;
+            }
+            else
+            {
+                tb_code.Visible = false;
+                btn_submit.Visible = false;
+                btn_send.Visible = true;
+            }
+            
         }
-
+        public bool visibility = false;
         public readonly Context context = new Context();
         protected void btn_cancel_Click(object sender, EventArgs e)
         {
@@ -95,7 +105,7 @@ namespace OnlineStudentManagementSystem
             if(studentCheck != null)
             {
                 SendMail();
-                lbl_status.Text = "Please check message that we sent to your email. Write reset code the following field to reset password.";
+                lbl_status.Text = "Please check message that we sent to your email.";
                 tb_code.Visible = true;
                 btn_send.Visible = false;
                 btn_submit.Visible = true;
@@ -109,11 +119,6 @@ namespace OnlineStudentManagementSystem
 
         private void ClearOldCode()
         {
-            //var oldCodes = from code in context.ResetCodes select new { code.Email };
-            //var oldCodesList = oldCodes.ToList();
-
-
-
             var oldCodeForDelete = (from o in context.ResetCodes
                                           where o.Email == tb_email.Text.Trim()
                                           select o);
@@ -217,11 +222,14 @@ namespace OnlineStudentManagementSystem
                     }
                     else
                     {
+                        visibility = true;
+                        tb_code.Text = "";
                         lbl_status.Text = "Code is invalid. Please try again.";
                     }
                 }
                 else
                 {
+                    
                     lbl_status.Text = "Code is invalid. Please try send message again.";
                 }
             }

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Index.aspx.cs" Inherits="OnlineStudentManagementSystem.Index" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="IndexAfterLogin.aspx.cs" Inherits="OnlineStudentManagementSystem.IndexAfterLogin" %>
 
 <!DOCTYPE html>
 
@@ -12,7 +12,7 @@
         }
         body {
             height: 85vh;
-            background-image: url('images/indexBackground.jpg');
+            background-image: url('images/indexBackground2.jpg');
             background-size: 800px,600px;
             font-family: sans-serif;
             margin-top: 80px;
@@ -50,9 +50,15 @@
             align-items: flex-end;
         }
 
-        header li a {
+        .atag{            
             color: black;
             text-decoration: none;
+            background: white;
+            border-block-style: hidden;
+            border-block-color: white;
+            cursor: pointer;
+            font-size: 14px;
+            border: white;
         }
 
         .right{
@@ -102,14 +108,15 @@
     </style>
 </head>
 <body>
-    <form id="formIndex" runat="server">
+    <form id="formIndexAfterLogin" runat="server">
         <div>
             <header>
             <nav>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="About.aspx">About</a></li>
-                    <li><a href="Contact.aspx">Contact</a></li>
+                    <li><a href="#" class="atag">Home</a></li>
+                    <li><a href="About.aspx" class="atag">About</a></li>
+                    <li><a href="Contact.aspx" class="atag">Contact</a></li>
+                    <li><asp:Button ID="btn_Logout" class="atag" runat="server" Text="Log Out" OnClick="btn_Logout_Click"/></li>
                 </ul>               
             </nav>
         </header>
@@ -117,9 +124,9 @@
         <div class="welcome">
             <h1>Welcome!</h1>
             <h2>Student Management System</h2>
-            <h3>Glad to see you! Please sign in to continue.</h3>
+            <h3>Glad to see you! Click the following button to return dashboard.</h3>
 
-            <asp:Button ID="btn_SignIn" class="button" runat="server" Text="Sign In" OnClick="btn_SignIn_Click" />
+            <asp:Button ID="btn_Return" class="button" runat="server" Text="Return" OnClick="btn_Return_Click" />
         </div>
     </form>
 </body>

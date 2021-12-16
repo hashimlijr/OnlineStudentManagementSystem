@@ -19,7 +19,7 @@
         }
         body{
             background-color: #080710;
-            background-image: url(https://kalbelearningcentre.kalbe.co.id/Portals/0/EasyDNNnews/52/img-IP.png);
+            background-image: url('images/aboutBackground.png');
             background-size: cover;
         }
         .background{
@@ -30,29 +30,7 @@
             left: 50%;
             top: 50%;
         }
-        /*.background .shape{
-            height: 200px;
-            width: 200px;
-            position: absolute;
-            border-radius: 50%;
-        }
-        .shape:first-child{
-            background: linear-gradient(
-                #1845ad,
-                #23a2f6
-            );
-            left: -80px;
-            top: -80px;
-        }
-        .shape:last-child{
-            background: linear-gradient(
-                to right,
-                #ff512f,
-                #f09819
-            );
-            right: -30px;
-            bottom: -80px;
-        }*/
+
         form{
             height: 600px;
             width: 800px;
@@ -113,9 +91,6 @@
             font-size: 14px;
             font-weight: 300;
         }
-        /*::placeholder{
-            color: #e5e5e5;
-        }*/
         .button{
             margin-top: 50px;
             width: 100%;
@@ -180,23 +155,6 @@
               <div class="fb"><a href="https://www.facebook.com/HashimliS/"><i class="fab fa-facebook"></i>  Facebook</a></div>
                 <div class="ins"><a href="https://www.instagram.com/hashimlijr/"><i class="fab fa-instagram"></i>  Instagram</a></div>
             </div>
-            
-
-            <%--<asp:Label ID="lbl_student_fullName" class="label" runat="server" Text="Full Name"></asp:Label>
-            <br />
-            <asp:Label ID="lbl_status" class="label" runat="server" Text="Select which course and assign score"></asp:Label>
-
-            <label for="course">Course</label>
-            <asp:DropDownList ID="ddl_Courses" runat="server"></asp:DropDownList>
-
-            <label for="score">Score</label>
-            <asp:TextBox ID="tb_score" runat="server" placeholder="Score"></asp:TextBox>   
-
-            <asp:Button ID="btn_assign" class="button" runat="server" Text="Assign"/>
-
-            <div class="social">                
-                    <asp:Button ID="btn_cancel" class="social" runat="server" Text="Cancel"/>             
-            </div>--%>
         </div>
     </form>
 </body>

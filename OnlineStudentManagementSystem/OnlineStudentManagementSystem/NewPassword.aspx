@@ -152,10 +152,10 @@
             <asp:Label ID="lbl_status" class="label" runat="server" Text="* required fields"></asp:Label>
 
             <label for="password">New Password*</label>
-            <asp:TextBox ID="tb_password" runat="server" placeholder="Password"></asp:TextBox>
+            <asp:TextBox ID="tb_password" runat="server" type="password" placeholder="Password"></asp:TextBox>
 
             <label for="coPassword">Confirm Password*</label>
-            <asp:TextBox ID="tb_coPassword" runat="server" placeholder="Confirm Password"></asp:TextBox>
+            <asp:TextBox ID="tb_coPassword" runat="server" type="password" placeholder="Confirm Password"></asp:TextBox>
 
 
             <asp:Button ID="btn_confirm" class="button" runat="server" Text="Confirm" OnClick="btn_confirm_Click"/>

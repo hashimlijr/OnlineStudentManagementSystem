@@ -152,7 +152,7 @@
             <asp:TextBox ID="tb_email" runat="server" placeholder="Email"></asp:TextBox>
 
             <label for="password">Password</label>
-            <asp:TextBox ID="tb_password" runat="server" placeholder="Password"></asp:TextBox>
+            <asp:TextBox ID="tb_password" runat="server" type="password" placeholder="Password"></asp:TextBox>
 
             <asp:Label ID="lbl_status" class="label" runat="server" Text="Status"></asp:Label>
 

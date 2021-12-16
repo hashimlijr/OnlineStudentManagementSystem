@@ -185,10 +185,10 @@
             <asp:TextBox ID="tb_email" runat="server" placeholder="Email"></asp:TextBox>            
 
             <label for="password">Password*</label>
-            <asp:TextBox ID="tb_password" runat="server" placeholder="Password"></asp:TextBox>
+            <asp:TextBox ID="tb_password" runat="server" type="password" placeholder="Password"></asp:TextBox>
 
             <label for="conpassword">Password confirmation*</label>
-            <asp:TextBox ID="tb_conpassword" runat="server" placeholder="Confirm password"></asp:TextBox>
+            <asp:TextBox ID="tb_conpassword" runat="server" type="password" placeholder="Confirm password"></asp:TextBox>
 
             <label for="profesion">Choose profesion of student</label>
             <asp:DropDownList ID="DropDownList_Profesion" class="dropdownlist" runat="server"></asp:DropDownList>

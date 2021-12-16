@@ -10,7 +10,8 @@ namespace OnlineStudentManagementSystem
     public partial class AdminPanel : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
-        {
+        {          
+
             lbl_Status.Text = "";
             string status = Request.QueryString["status"];
 
@@ -42,90 +43,91 @@ namespace OnlineStudentManagementSystem
             };
             context.Admins.Add(admin);
 
-            Branch branch = new Branch()
+            List<Branch> branches = new List<Branch>()
             {
-                BranchName = "BranchName",
+                new Branch{BranchName = "Accounting and Audit"},
+                new Branch{BranchName = "Architecture and Design"},
+                new Branch{BranchName = "Chemistry"},
+                new Branch{BranchName = "Computer and Information Technologies"},
+                new Branch{BranchName = "Foreign languages"},
+                new Branch{BranchName = "Mechanical Engineering"},
             };
-            context.Branches.Add(branch);
 
-            Instructor instructor = new Instructor()
+            foreach (Branch branch in branches)
             {
-                InstructorName = "InstructorName",
-                InstructorSurname = "InstructorSurname",
-                FatherNameOfInstructor = "FatherNameOfInstructor",
-                Email = "instructor@gmail.com",
-                Password = "instructor123",
-                BranchId = 1,
-            };
-            context.Instructors.Add(instructor);
+                context.Branches.Add(branch);
+            }
 
-            Course course = new Course()
+            List<Instructor> instructors = new List<Instructor>()
             {
-                CourseName = "CourseName",
+                new Instructor{InstructorName = "InstructorName", InstructorSurname = "InstructorSurname", FatherNameOfInstructor = "FatherNameOfInstructor", Email = "instructor@gmail.com", Password = "instructor123", BranchId = 1},
+                new Instructor{InstructorName = "Jolie", InstructorSurname = "Holder", FatherNameOfInstructor = "Josh", Email = "jolieholder@gmail.com", Password = "jolie123", BranchId = 2},
+                new Instructor{InstructorName = "Troy", InstructorSurname = "Ward", FatherNameOfInstructor = "Markus", Email = "troyward@gmail.com", Password = "troy123", BranchId = 3},
+                new Instructor{InstructorName = "Branson", InstructorSurname = "Cochran", FatherNameOfInstructor = "Manuel", Email = "bransoncochran@gmail.com", Password = "branson123", BranchId = 4},
+                new Instructor{InstructorName = "Erica", InstructorSurname = "Cannon", FatherNameOfInstructor = "Desmond", Email = "ericacannon@gmail.com", Password = "erica123", BranchId = 5},
             };
-            context.Courses.Add(course);
 
-            Profesion profesion = new Profesion()
+            foreach (Instructor instructor in instructors)
             {
-                ProfesionName = "ProfesionName",
-            };
-            context.Profesions.Add(profesion);
+                context.Instructors.Add(instructor);
+            }
 
-            Student studenttest = new Student()
+
+            List<Course> courses = new List<Course>()
             {
-                StudentName = "StudentName",
-                StudentSurname = "StudentSurname",
-                FatherNameOfStudent = "FatherNameOfStudent",
-                Email = "student@gmail.com",
-                Password = "student",
-                ProfesionId = 1,
+                new Course{CourseName = "Fundamentals of computer engineering"},
+                new Course{CourseName = "Linear Algebra and Calculus"},
+                new Course{CourseName = "Data Structures and Algorithms"},
+                new Course{CourseName = "Computer Architecture"},
+                new Course{CourseName = "Probabilty theory and mathematical statistics"},
+                new Course{CourseName = "Basics of Electronics"},
+                new Course{CourseName = "Information Security"},
+                new Course{CourseName = "Web Design"},
+                new Course{CourseName = "Data Mining and Storing"},
+                new Course{CourseName = "Machine Learning"},
+                new Course{CourseName = "Modern Programming Languages I"},
+                new Course{CourseName = "Graphic design"},
             };
-            context.Students.Add(studenttest);
 
+            foreach (Course course in courses)
+            {
+                context.Courses.Add(course);
+            }
 
+            List<Profesion> profesions = new List<Profesion>()
+            {
+                new Profesion{ProfesionName = "Accounting"},
+                new Profesion{ProfesionName = "Business Administration"},
+                new Profesion{ProfesionName = "Architecture"},
+                new Profesion{ProfesionName = "Design"},
+                new Profesion{ProfesionName = "Chemistry Education"},
+                new Profesion{ProfesionName = "Chemical Engineering"},
+                new Profesion{ProfesionName = "Information Technologies"},
+                new Profesion{ProfesionName = "Cybersecurity"},
+                new Profesion{ProfesionName = "Mechanical Engineering"},
+            };
 
+            foreach (Profesion profesion in profesions)
+            {
+                context.Profesions.Add(profesion);
+            }
 
+            List<Student> students = new List<Student>()
+            {
+                new Student{ StudentName = "StudentName", StudentSurname = "StudentSurname", FatherNameOfStudent = "FatherNameOfStudent", Email = "student@gmail.com", Password = "student", ProfesionId = 1,},
+                new Student{ StudentName = "Sahil", StudentSurname = "Hashimli", FatherNameOfStudent = "Qanbar", Email = "hashimlisahil@gmail.com", Password = "sahil123", ProfesionId = 1,},
+                new Student{ StudentName = "Jesse", StudentSurname = "Hodge", FatherNameOfStudent = "Roger", Email = "jessehodge@gmail.com", Password = "jesse123", ProfesionId = 2,},
+                new Student{ StudentName = "Skye", StudentSurname = "Riley", FatherNameOfStudent = "Damion", Email = "skyeriley@gmail.com", Password = "skye123", ProfesionId = 2,},
+                new Student{ StudentName = "Matias", StudentSurname = "Robinson", FatherNameOfStudent = "Konner", Email = "matiasrobinson@gmail.com", Password = "matias123", ProfesionId = 3,},
+                new Student{ StudentName = "Matteo", StudentSurname = "Gray", FatherNameOfStudent = "Elliott", Email = "matteogray@gmail.com", Password = "matteo123", ProfesionId = 4,},
+                new Student{ StudentName = "Olivia", StudentSurname = "Stanton", FatherNameOfStudent = "Curtis", Email = "oliviastanton@gmail.com", Password = "olivia123", ProfesionId = 3,},
+                new Student{ StudentName = "Sara", StudentSurname = "Chapman", FatherNameOfStudent = "Leonard", Email = "sarachapman@gmail.com", Password = "sara123", ProfesionId = 5,},
+            };
 
-            //grade.CourseID = 2;
-            //grade.GradeScore = 91;
-            //context.Grades.Add(grade);
-
-            //grade.StudentID = 2;
-            //grade.CourseID = 2;
-            //grade.GradeScore = 100;
-
-            //Student student1 = context.Students.FirstOrDefault(s => s.StudentID == 1);
-            //Course course1 = context.Courses.FirstOrDefault(c => c.CourseID == 1);
-            //Grade grade1 = new Grade()
-            //{
-            //    StudentID = student1.StudentID,
-            //    CourseID = course1.CourseID,
-            //    GradeScore = 98,
-            //};
-
-            //context.Grades.Add(grade1);
-            //Grade grade2 = new Grade()
-            //{
-
-            //    GradeScore = 75,
-            //}; 
-
-            //Grade grade3 = new Grade()
-            //{
-            //    GradeScore = 100,
-            //};
-            //List<Grade> grades = new List
-            //{
-            //    new Grade
-            //    {
-            //        GradeScore = 98,
-            //    }
-            //};
-
-            //student1.Grades = new List<Grade>();
-            //student1.Grades.Add(grade1);
-            //student1.Grades.Add(grade2);
-            //student1.Grades.Add(grade3);
+            foreach (Student student in students)
+            {
+                context.Students.Add(student);
+            }
 
             context.SaveChanges();
         }
@@ -268,6 +270,12 @@ namespace OnlineStudentManagementSystem
             {
                 lbl_Status.Text = "Selected profesion: Something get wrong :(";
             }
+        }
+
+        protected void btn_Logout_Click(object sender, EventArgs e)
+        {
+            Session.Abandon();
+            Response.Redirect("Index.aspx");
         }
     }
 }

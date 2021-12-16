@@ -91,6 +91,7 @@
     <Content Include="EditProfesion.aspx" />
     <Content Include="EditStudent.aspx" />
     <Content Include="Index.aspx" />
+    <Content Include="IndexAfterLogin.aspx" />
     <Content Include="InstructorDashboard.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="NewPassword.aspx" />
@@ -202,6 +203,13 @@
     </Compile>
     <Compile Include="Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IndexAfterLogin.aspx.cs">
+      <DependentUpon>IndexAfterLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IndexAfterLogin.aspx.designer.cs">
+      <DependentUpon>IndexAfterLogin.aspx</DependentUpon>
     </Compile>
     <Compile Include="Instructor.cs" />
     <Compile Include="InstructorDashboard.aspx.cs">

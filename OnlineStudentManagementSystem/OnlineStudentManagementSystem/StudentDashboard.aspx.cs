@@ -39,10 +39,19 @@ namespace OnlineStudentManagementSystem
             //ClearOtherTables("grade");
             int id = Int32.Parse(Session["user"].ToString());
             var gradesList = context.Grades.Where(g => g.StudentID == id).ToList();
-            if(gradesList != null)
+
+            //var gradesList = (from grade in context.Grades
+            //                  where grade.StudentID == id
+            //                   select grade).ToList();
+
+            if (gradesList.Count != 0)
             {
                 gv_Grades.DataSource = gradesList;
                 gv_Grades.DataBind();
+            }
+            else
+            {
+                lbl_status.Text = "You have not any grade";
             }
             
         }
@@ -74,6 +83,7 @@ namespace OnlineStudentManagementSystem
             context.StudentCourses.Add(studentCourse);
 
             context.SaveChanges();
+            lbl_status.Text = "Course registered successfully.";
         }
 
         protected void btn_Logout_Click(object sender, EventArgs e)
