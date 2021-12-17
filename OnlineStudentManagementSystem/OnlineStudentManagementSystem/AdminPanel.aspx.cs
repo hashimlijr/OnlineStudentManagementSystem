@@ -10,9 +10,16 @@ namespace OnlineStudentManagementSystem
     public partial class AdminPanel : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
-        {          
+        {
+            //After creating database you can uncomment the following lines.
+            
+            //if(Session["user"] == null)
+            //{
+            //    Response.Redirect("Login.aspx");
+            //}
 
             lbl_Status.Text = "";
+
             string status = Request.QueryString["status"];
 
             switch (status)
