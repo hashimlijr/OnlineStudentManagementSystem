@@ -178,7 +178,7 @@
             <label for="instructor">Choose instructor*</label>
             <asp:DropDownList ID="ddl_instructor" class="dropdownlist" runat="server"></asp:DropDownList> 
 
-            <asp:Button ID="btn_update" class="button" runat="server" Text="Add" OnClick="btn_update_Click"/>
+            <asp:Button ID="btn_update" class="button" runat="server" Text="Update" OnClick="btn_update_Click"/>
 
             <asp:Button ID="btn_delete" class="buttonDelete" runat="server" Text="Delete" OnClick="btn_delete_Click"/>
 

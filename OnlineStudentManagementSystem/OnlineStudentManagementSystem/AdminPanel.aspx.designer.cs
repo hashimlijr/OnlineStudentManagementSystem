@@ -141,48 +141,12 @@ namespace OnlineStudentManagementSystem
         protected global::System.Web.UI.WebControls.Button btn_EditProfesion;
 
         /// <summary>
-        /// gv_Students control.
+        /// gv_Data control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gv_Students;
-
-        /// <summary>
-        /// gv_Instructor control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gv_Instructor;
-
-        /// <summary>
-        /// gv_Courses control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gv_Courses;
-
-        /// <summary>
-        /// gv_Branch control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gv_Branch;
-
-        /// <summary>
-        /// gv_Profesion control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gv_Profesion;
+        protected global::System.Web.UI.WebControls.GridView gv_Data;
     }
 }

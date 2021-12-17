@@ -75,18 +75,18 @@ namespace OnlineStudentManagementSystem
 
             List<Course> courses = new List<Course>()
             {
-                new Course{CourseName = "Fundamentals of computer engineering"},
-                new Course{CourseName = "Linear Algebra and Calculus"},
-                new Course{CourseName = "Data Structures and Algorithms"},
-                new Course{CourseName = "Computer Architecture"},
-                new Course{CourseName = "Probabilty theory and mathematical statistics"},
-                new Course{CourseName = "Basics of Electronics"},
-                new Course{CourseName = "Information Security"},
-                new Course{CourseName = "Web Design"},
-                new Course{CourseName = "Data Mining and Storing"},
-                new Course{CourseName = "Machine Learning"},
-                new Course{CourseName = "Modern Programming Languages I"},
-                new Course{CourseName = "Graphic design"},
+                new Course{CourseName = "Fundamentals of computer engineering", InstructorId = 1},
+                new Course{CourseName = "Linear Algebra and Calculus", InstructorId = 1},
+                new Course{CourseName = "Data Structures and Algorithms", InstructorId = 1},
+                new Course{CourseName = "Computer Architecture", InstructorId = 2},
+                new Course{CourseName = "Probabilty theory and mathematical statistics", InstructorId = 2},
+                new Course{CourseName = "Basics of Electronics", InstructorId = 3},
+                new Course{CourseName = "Information Security", InstructorId = 2},
+                new Course{CourseName = "Web Design", InstructorId = 4},
+                new Course{CourseName = "Data Mining and Storing", InstructorId = 1},
+                new Course{CourseName = "Machine Learning", InstructorId = 2},
+                new Course{CourseName = "Modern Programming Languages I", InstructorId = 1},
+                new Course{CourseName = "Graphic design", InstructorId = 3},
             };
 
             foreach (Course course in courses)
@@ -161,121 +161,77 @@ namespace OnlineStudentManagementSystem
         {
             var students = from student in context.Students select new { student.StudentID, student.StudentName, student.StudentSurname, student.FatherNameOfStudent, student.Email, student.DateOfBirth , student.ProfesionId };
             var studentsList = students.ToList();
-            gv_Students.DataSource = studentsList;
-            gv_Students.DataBind();
-        }
-
-        protected void gv_Students_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string idString = gv_Students.SelectedRow.Cells[1].Text;
-
-            try
-            {
-                Session["user"] = idString;
-                Response.Redirect("EditStudent.aspx?id=" + idString);
-            }
-            catch
-            {
-                lbl_Status.Text = "Selected student: Something get wrong :(";
-            }
+            gv_Data.DataSource = studentsList;
+            gv_Data.DataBind();
         }
 
         protected void btn_EditInstructor_Click(object sender, EventArgs e)
         {
             var instructors = from instructor in context.Instructors select new { instructor.InstructorID, instructor.InstructorName, instructor.InstructorSurname, instructor.FatherNameOfInstructor, instructor.Email, instructor.DateOfBirth, instructor.BranchId };
             var instructorList = instructors.ToList();
-            gv_Instructor.DataSource = instructorList;
-            gv_Instructor.DataBind();
-        }
-
-        protected void gv_Instructor_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string idString = gv_Instructor.SelectedRow.Cells[1].Text;
-
-            try
-            {
-                Session["user"] = idString;
-                Response.Redirect("EditInstructor.aspx?id=" + idString);
-            }
-            catch
-            {
-                lbl_Status.Text = "Selected student: Something get wrong :(";
-            }
+            gv_Data.DataSource = instructorList;
+            gv_Data.DataBind();
         }
 
         protected void btn_EditCourse_Click(object sender, EventArgs e)
         {
             var courses = from course in context.Courses select new { course.CourseID, course.CourseName, course.InstructorId };
             var courseList = courses.ToList();
-            gv_Courses.DataSource = courseList;
-            gv_Courses.DataBind();
+            gv_Data.DataSource = courseList;
+            gv_Data.DataBind();
         }
 
         protected void btn_EditBranch_Click(object sender, EventArgs e)
         {
             var branches = from branch in context.Branches select new { branch.BranchId, branch.BranchName };
             var branchList = branches.ToList();
-            gv_Branch.DataSource = branchList;
-            gv_Branch.DataBind();
+            gv_Data.DataSource = branchList;
+            gv_Data.DataBind();
         }
 
         protected void btn_EditProfesion_Click(object sender, EventArgs e)
         {
             var profesions = from profesion in context.Profesions select new { profesion.ProfesionId, profesion.ProfesionName };
             var profesionList = profesions.ToList();
-            gv_Profesion.DataSource = profesionList;
-            gv_Profesion.DataBind();
-        }
-
-        protected void gv_Courses_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string idString = gv_Courses.SelectedRow.Cells[1].Text;
-
-            try
-            {
-                Session["user"] = idString;
-                Response.Redirect("EditCourse.aspx?id=" + idString);
-            }
-            catch
-            {
-                lbl_Status.Text = "Selected course: Something get wrong :(";
-            }
-        }
-
-        protected void gv_Branch_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string idString = gv_Branch.SelectedRow.Cells[1].Text;
-
-            try
-            {
-                Session["user"] = idString;
-                Response.Redirect("EditBranch.aspx?id=" + idString);
-            }
-            catch
-            {
-                lbl_Status.Text = "Selected branch: Something get wrong :(";
-            }
-        }
-
-        protected void gv_Profesion_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string idString = gv_Profesion.SelectedRow.Cells[1].Text;
-
-            try
-            {
-                Session["user"] = idString;
-                Response.Redirect("EditProfesion.aspx?id=" + idString);
-            }
-            catch
-            {
-                lbl_Status.Text = "Selected profesion: Something get wrong :(";
-            }
-        }
+            gv_Data.DataSource = profesionList;
+            gv_Data.DataBind();
+        }        
 
         protected void btn_Logout_Click(object sender, EventArgs e)
         {
             Session.Abandon();
             Response.Redirect("Index.aspx");
+        }
+
+        protected void gv_Data_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string idString = gv_Data.SelectedRow.Cells[1].Text;
+            string columnName = gv_Data.HeaderRow.Cells[2].Text;
+
+
+            switch (columnName)
+            {
+                case "StudentName":
+                    Session["user"] = idString;
+                    Response.Redirect("EditStudent.aspx?id=" + idString);
+                    return;
+                case "InstructorName":
+                    Session["user"] = idString;
+                    Response.Redirect("EditInstructor.aspx?id=" + idString);
+                    return;
+                case "CourseName":
+                    Session["user"] = idString;
+                    Response.Redirect("EditCourse.aspx?id=" + idString);
+                    return;
+                case "BranchName":
+                    Session["user"] = idString;
+                    Response.Redirect("EditBranch.aspx?id=" + idString);
+                    return;
+                case "ProfesionName":
+                    Session["user"] = idString;
+                    Response.Redirect("EditProfesion.aspx?id=" + idString);
+                    return;
+            }
         }
     }
 }

@@ -74,7 +74,9 @@ namespace OnlineStudentManagementSystem
 
             string fullName = ddl_instructor.SelectedValue;
             string[] splitedName = fullName.Split(' ');
-            Instructor instructor = context.Instructors.FirstOrDefault(i => i.InstructorName == splitedName[0] && i.InstructorSurname == splitedName[1]);
+            string name = splitedName[0];
+            string surname = splitedName[1];
+            Instructor instructor = context.Instructors.FirstOrDefault(i => i.InstructorName == name && i.InstructorSurname == surname);
 
             if (tb_name.Text != "")
             {

@@ -108,7 +108,7 @@
             <header>
             <nav>
                 <ul>
-                    <li><a href="#" class="atag" >Home</a></li>
+                    <li><a href="Index.aspx" class="atag" >Home</a></li>
                     <li>
                         <asp:Button ID="btn_Logout" class="atag" runat="server" Text="Log Out" OnClick="btn_Logout_Click" />
                     </li>
@@ -148,23 +148,9 @@
 
             <div class="grid">
                     
-                <asp:GridView ID="gv_Students" runat="server" AutoGenerateSelectButton="True" Width="406px" OnSelectedIndexChanged="gv_Students_SelectedIndexChanged"></asp:GridView>
+                <asp:GridView ID="gv_Data" runat="server" AutoGenerateSelectButton="True" Width="406px" OnSelectedIndexChanged="gv_Data_SelectedIndexChanged"></asp:GridView>
                     
-                <br />
-                    
-                <asp:GridView ID="gv_Instructor" runat="server" AutoGenerateSelectButton="True" Width="406px" OnSelectedIndexChanged="gv_Instructor_SelectedIndexChanged"></asp:GridView> 
-                
-                <br />    
-                
-                <asp:GridView ID="gv_Courses" runat="server" AutoGenerateSelectButton="True" Width="406px" OnSelectedIndexChanged="gv_Courses_SelectedIndexChanged"></asp:GridView>                    
-                 
-                <br />   
-                
-                <asp:GridView ID="gv_Branch" runat="server" AutoGenerateSelectButton="True" Width="406px" OnSelectedIndexChanged="gv_Branch_SelectedIndexChanged"></asp:GridView>
-                 
-                <br />   
-                
-                <asp:GridView ID="gv_Profesion" runat="server" AutoGenerateSelectButton="True" Width="406px" OnSelectedIndexChanged="gv_Profesion_SelectedIndexChanged"></asp:GridView>                             
+                <br />                            
             </div>
 
         </div>
